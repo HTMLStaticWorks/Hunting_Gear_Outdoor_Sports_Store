@@ -1,0 +1,85 @@
+/* ==========================================================================
+   VANGUARD OUTPOST — RTL (RIGHT-TO-LEFT) LAYOUT ENGINE
+   Enables seamless Arabic / Hebrew / Persian reading flow.
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Nav & Mobile Drawer RTL */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: -100%;
+  border-left: none;
+  border-right: 1px solid var(--border-accent);
+  box-shadow: 15px 0 40px rgba(0, 0, 0, 0.85);
+  transition: left var(--transition-smooth);
+}
+
+[dir="rtl"] .mobile-drawer.is-open {
+  left: 0;
+}
+
+[dir="rtl"] .mobile-nav-link:hover,
+[dir="rtl"] .mobile-nav-link.active {
+  padding-left: 0;
+  padding-right: var(--space-2);
+}
+
+[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .modal-close-btn {
+  right: auto;
+  left: var(--space-4);
+}
+
+/* Maintain Center Alignment for Tilt Cards in RTL */
+[dir="rtl"] .tilt-card {
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .section-header {
+  text-align: center;
+}
+
+[dir="rtl"] .footer-heading::after {
+  left: auto;
+  right: 0;
+}
+
+@media (max-width: 639.98px) {
+  [dir="rtl"] .footer-heading::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(50%);
+  }
+}
+
+[dir="rtl"] .btn-icon-right svg {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .btn:hover .btn-icon-right svg {
+  transform: rotate(180deg) translateX(4px);
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: var(--space-6);
+}
+
+[dir="rtl"] .skip-link {
+  left: auto;
+  right: var(--space-4);
+}

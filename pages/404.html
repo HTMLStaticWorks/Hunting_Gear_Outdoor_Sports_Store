@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coordinates Unknown (404) | Vanguard Outpost</title>
+  <meta name="description" content="You have wandered off the marked hunting trail. Re-orient your compass back to Vanguard Outpost base camp.">
+  <meta name="robots" content="noindex, follow">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+
+  <!-- Primary Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary Expedition Navigation">
+        <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
+          <div class="brand-emblem" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5z"/></svg>
+          </div>
+          <div>
+            VANGUARD
+            <span class="brand-text-sub">LOST COORDINATES</span>
+          </div>
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.88rem;">RETURN TO BASE CAMP</a>
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 404 Hero Container -->
+  <main id="main-content" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 20px; position: relative;">
+    <div class="topography-canvas-container" aria-hidden="true">
+      <canvas class="topography-canvas"></canvas>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 680px;">
+      <!-- 3D Spinning Compass Reticle -->
+      <div class="card-icon-wrap" style="width: 100px; height: 100px; margin-bottom: 24px; color: var(--color-blaze); border-color: var(--color-blaze); box-shadow: 0 0 30px var(--color-blaze-glow);">
+        <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; animation: spin-compass 12s infinite linear;">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polygon points="12,4 15,12 12,10 9,12" fill="var(--color-blaze)"/>
+          <polygon points="12,20 15,12 12,14 9,12" fill="var(--color-khaki)"/>
+        </svg>
+      </div>
+
+      <style>
+        @keyframes spin-compass {
+          0% { transform: rotate(0deg); }
+          50% { transform: rotate(180deg); }
+          100% { transform: rotate(360deg); }
+        }
+      </style>
+
+      <span class="section-tag" style="background: rgba(231, 76, 60, 0.2); border-color: #e74c3c; color: #ff6b6b;">
+        SECTOR BEACON LOST &bull; ERROR 404
+      </span>
+      <h1 class="section-title" style="font-size: clamp(2.4rem, 6vw, 4rem); margin: 16px 0 12px;">
+        YOU'VE WANDERED OFF THE TRAIL
+      </h1>
+      <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.7;">
+        The ridge coordinates you requested do not correspond to any known survey marker or supply cache. Check your compass bearing and recalibrate back to primary outpost sectors.
+      </p>
+
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary">
+          <span>HOME 1 (SEASONAL ARMORY)</span>
+        </a>
+        <a href="home-2.html" class="btn btn-secondary">
+          <span>HOME 2 (EXPEDITION MODE)</span>
+        </a>
+        <a href="products.html" class="btn btn-outline">
+          <span>MASTER GEAR VAULT</span>
+        </a>
+        <a href="contact.html" class="btn btn-outline">
+          <span>RADIO PRO-STAFF</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="padding: 24px 0;">
+    <div class="container" style="text-align: center; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-faint);">
+      &copy; 2026 VANGUARD OUTPOST &bull; 4800 TIMBERLINE RIDGE PASS, BOZEMAN, MT
+    </div>
+  </footer>
+
+  <script src="../assets/js/plugins/topography-bg.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

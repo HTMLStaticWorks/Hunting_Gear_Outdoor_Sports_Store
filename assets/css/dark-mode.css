@@ -1,0 +1,160 @@
+/* ==========================================================================
+   VANGUARD OUTPOST — THEME ENGINE (DARK / LIGHT MODE)
+   Strict Requirement: Both modes must strictly preserve the rugged/outdoor
+   visual identity (canvas stone parchment, pine needle, burnt orange, gunmetal).
+   ========================================================================== */
+
+/* Light Mode Overrides: Canvas Stone & Forest Theme */
+:root[data-theme="light"] {
+  --bg-base: #f3f0e8;
+  --bg-surface: #eae5d8;
+  --bg-surface-elevated: #dfd9ca;
+  --bg-card: #f9f7f2;
+  --bg-card-hover: #ffffff;
+  --bg-overlay: rgba(243, 240, 232, 0.92);
+
+  --color-primary: #1e3826;
+  --color-primary-light: #2b5037;
+  --color-pine: #23442e;
+  --color-gunmetal: #2d3831;
+  --color-charcoal: #3b4740;
+
+  /* Retain high-visibility hunting orange */
+  --color-blaze: #d8521a;
+  --color-blaze-hover: #c44410;
+  --color-blaze-glow: rgba(216, 82, 26, 0.22);
+  --color-blaze-subtle: rgba(216, 82, 26, 0.1);
+
+  --color-olive: #546543;
+  --color-olive-light: #3e4d31;
+  --color-khaki: #695e4d;
+  --color-khaki-subtle: rgba(105, 94, 77, 0.1);
+  --color-tan: #3d3528;
+
+  /* Inverted Text */
+  --text-main: #17241c;
+  --text-muted: #4e5f54;
+  --text-faint: #798d80;
+  --text-inverse: #f3f0e8;
+
+  /* Borders */
+  --border-subtle: rgba(78, 95, 84, 0.18);
+  --border-medium: rgba(78, 95, 84, 0.32);
+  --border-accent: rgba(216, 82, 26, 0.45);
+  --border-glow: 0 0 16px rgba(216, 82, 26, 0.2);
+
+  /* Shadows for Light Mode */
+  --shadow-sm: 0 2px 8px rgba(35, 48, 40, 0.08);
+  --shadow-md: 0 8px 24px rgba(35, 48, 40, 0.12);
+  --shadow-lg: 0 16px 40px rgba(35, 48, 40, 0.18);
+  --shadow-tilt: 0 20px 45px -10px rgba(35, 48, 40, 0.22), 0 0 25px rgba(216, 82, 26, 0.15);
+}
+
+/* Base Body Adjustments in Light Mode */
+[data-theme="light"] body {
+  background-color: var(--bg-base);
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(35, 68, 46, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(216, 82, 26, 0.05) 0%, transparent 45%),
+    linear-gradient(to bottom, #f3f0e8, #ebe6d9);
+}
+
+[data-theme="light"] .top-ticker-bar {
+  background: #e3decfa6;
+  border-bottom-color: var(--border-subtle);
+}
+
+[data-theme="light"] .site-header {
+  background: rgba(243, 240, 232, 0.94);
+}
+
+[data-theme="light"] .site-header.is-scrolled {
+  background: rgba(235, 230, 217, 0.98);
+}
+
+[data-theme="light"] .tilt-card {
+  background: linear-gradient(145deg, #ffffff, #f4f0e6);
+  border: 1px solid var(--border-subtle);
+}
+
+[data-theme="light"] .tilt-card::before {
+  background-image: 
+    radial-gradient(rgba(78, 95, 84, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(216, 82, 26, 0.03), transparent);
+}
+
+[data-theme="light"] .card-icon-wrap {
+  background: linear-gradient(135deg, #e4ded0, #f8f6f0);
+  border-color: var(--color-olive);
+}
+
+[data-theme="light"] .spec-chip {
+  background: rgba(78, 95, 84, 0.08);
+  border-color: var(--border-subtle);
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .site-footer {
+  background: #e2ddd0;
+  border-top-color: var(--border-subtle);
+}
+
+[data-theme="light"] .hero-1-overlay {
+  background: linear-gradient(90deg, rgba(243, 240, 232, 0.95) 0%, rgba(243, 240, 232, 0.82) 50%, rgba(243, 240, 232, 0.4) 100%),
+              linear-gradient(to top, #f3f0e8 0%, transparent 60%);
+}
+
+[data-theme="light"] .hero-title {
+  text-shadow: 0 4px 20px rgba(243, 240, 232, 0.8);
+}
+
+[data-theme="light"] .mobile-drawer {
+  background: #f0ebe0;
+}
+
+[data-theme="light"] .expedition-gauge-card {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="light"] .weight-meter-card {
+  background: #f7f5ed;
+}
+
+/* System Preference Auto Detection (If no manual preference is set) */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg-base: #f3f0e8;
+    --bg-surface: #eae5d8;
+    --bg-surface-elevated: #dfd9ca;
+    --bg-card: #f9f7f2;
+    --bg-card-hover: #ffffff;
+    --bg-overlay: rgba(243, 240, 232, 0.92);
+
+    --color-primary: #1e3826;
+    --color-primary-light: #2b5037;
+    --color-pine: #23442e;
+    --color-gunmetal: #2d3831;
+    --color-charcoal: #3b4740;
+
+    --color-blaze: #d8521a;
+    --color-blaze-hover: #c44410;
+    --color-blaze-glow: rgba(216, 82, 26, 0.22);
+    --color-blaze-subtle: rgba(216, 82, 26, 0.1);
+
+    --color-olive: #546543;
+    --color-olive-light: #3e4d31;
+    --color-khaki: #695e4d;
+    --color-khaki-subtle: rgba(105, 94, 77, 0.1);
+    --color-tan: #3d3528;
+
+    --text-main: #17241c;
+    --text-muted: #4e5f54;
+    --text-faint: #798d80;
+    --text-inverse: #f3f0e8;
+
+    --border-subtle: rgba(78, 95, 84, 0.18);
+    --border-medium: rgba(78, 95, 84, 0.32);
+    --border-accent: rgba(216, 82, 26, 0.45);
+    --border-glow: 0 0 16px rgba(216, 82, 26, 0.2);
+  }
+}

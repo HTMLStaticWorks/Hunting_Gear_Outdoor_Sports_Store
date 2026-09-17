@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Next-Gen Thermal Vault | Vanguard Outpost</title>
+  <meta name="description" content="Prepare for the next evolution in thermal hunting optics and ballistic precision. Register for VIP notification and priority allocation.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+
+  <!-- Primary Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary Expedition Navigation">
+        <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
+          <div class="brand-emblem" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5z"/></svg>
+          </div>
+          <div>
+            VANGUARD
+            <span class="brand-text-sub">CLASSIFIED DROP</span>
+          </div>
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="index.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.88rem;">EXPLORE CURRENT VAULT</a>
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Coming Soon Content Container -->
+  <main id="main-content" style="flex: 1; padding: 60px 20px; position: relative;">
+    <div class="topography-canvas-container" aria-hidden="true">
+      <canvas class="topography-canvas"></canvas>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 860px; margin: 0 auto;">
+      <span class="section-tag" style="background: rgba(224, 93, 38, 0.2); border-color: var(--color-blaze); color: var(--color-blaze);">
+        PROJECT HORIZON 2026 &bull; CLASSIFIED DROP
+      </span>
+
+      <h1 class="section-title" style="font-size: clamp(2.4rem, 6vw, 4rem); margin: 16px 0 16px;">
+        NEXT-GEN THERMAL &amp; BALLISTIC VAULT DROPPING SOON
+      </h1>
+
+      <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 36px; line-height: 1.7;">
+        We are finalizing field trials on our 12µm uncooled microbolometer sensor cores, titanium compound archery cams, and hydrophobic 900-fill backcountry sleep systems.
+      </p>
+
+      <!-- Functional Live Countdown Timer -->
+      <div id="countdown-timer" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px;">
+        <div style="background: var(--bg-surface-elevated); border: 1.5px solid var(--border-accent); border-radius: var(--radius-sm); padding: 18px 24px; min-width: 110px;">
+          <div id="timer-days" style="font-family: var(--font-display); font-size: 3rem; font-weight: 900; color: var(--color-blaze); line-height: 1;">45</div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">DAYS</div>
+        </div>
+
+        <div style="background: var(--bg-surface-elevated); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 18px 24px; min-width: 110px;">
+          <div id="timer-hours" style="font-family: var(--font-display); font-size: 3rem; font-weight: 900; color: var(--text-main); line-height: 1;">14</div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">HOURS</div>
+        </div>
+
+        <div style="background: var(--bg-surface-elevated); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 18px 24px; min-width: 110px;">
+          <div id="timer-minutes" style="font-family: var(--font-display); font-size: 3rem; font-weight: 900; color: var(--text-main); line-height: 1;">38</div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">MINUTES</div>
+        </div>
+
+        <div style="background: var(--bg-surface-elevated); border: 1.5px solid var(--border-accent); border-radius: var(--radius-sm); padding: 18px 24px; min-width: 110px;">
+          <div id="timer-seconds" style="font-family: var(--font-display); font-size: 3rem; font-weight: 900; color: var(--color-blaze); line-height: 1;">22</div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">SECONDS</div>
+        </div>
+      </div>
+
+      <!-- VIP Notification Form -->
+      <div class="tool-box" style="max-width: 600px; margin: 0 auto 40px; border: 1.5px solid var(--border-subtle);">
+        <h3 style="font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin-bottom: 8px;">
+          SECURE PRIORITY VAULT ALLOCATION
+        </h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">
+          First production run will be strictly capped at 250 serialized units. Sign up to receive the dispatch code 2 hours prior to public release.
+        </p>
+
+        <form data-validate="true" data-success-title="PRIORITY ACCESS CONFIRMED" data-success-msg="Your radio callsign has been logged. You will receive the priority access key 2 hours before general public drop.">
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <input type="email" id="vip-email" class="form-control" placeholder="hunter.callsign@domain.com" required style="flex: 1; min-width: 240px;" aria-label="VIP Email Address">
+            <button type="submit" class="btn btn-primary" style="flex-shrink: 0;">REGISTER FOR DROP</button>
+          </div>
+          <span class="error-msg" data-error-for="vip-email">Please enter a valid email address.</span>
+        </form>
+      </div>
+
+      <!-- Quick Back Nav -->
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-outline">RETURN TO HOME 1</a>
+        <a href="home-2.html" class="btn btn-outline">EXPLORE HOME 2 (EXPEDITION)</a>
+        <a href="products.html" class="btn btn-outline">BROWSE CURRENT GEAR</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="padding: 24px 0;">
+    <div class="container" style="text-align: center; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-faint);">
+      &copy; 2026 VANGUARD OUTPOST &bull; ALL RIGHTS RESERVED &bull; BOZEMAN, MONTANA
+    </div>
+  </footer>
+
+  <script src="../assets/js/plugins/topography-bg.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
