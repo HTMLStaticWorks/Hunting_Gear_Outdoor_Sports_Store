@@ -100,7 +100,7 @@
 }
 
 [data-theme="light"] .hero-1-overlay {
-  background: linear-gradient(90deg, rgba(243, 240, 232, 0.95) 0%, rgba(243, 240, 232, 0.82) 50%, rgba(243, 240, 232, 0.4) 100%),
+  background: radial-gradient(circle at center, rgba(243, 240, 232, 0.7) 0%, rgba(243, 240, 232, 0.95) 100%),
               linear-gradient(to top, #f3f0e8 0%, transparent 60%);
 }
 

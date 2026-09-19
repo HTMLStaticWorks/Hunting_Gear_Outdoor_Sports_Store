@@ -275,6 +275,7 @@ ul, ol {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  white-space: nowrap;
 }
 
 .status-dot {
@@ -291,7 +292,7 @@ ul, ol {
   50% { opacity: 0.4; transform: scale(0.85); }
 }
 
-.top-action-group {
+.top-action-group, .navbar-action-group {
   display: flex;
   align-items: center;
   gap: var(--space-3);
@@ -305,35 +306,43 @@ ul, ol {
   border: 1px solid var(--color-blaze);
   color: var(--color-blaze);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 6px 12px;
   border-radius: var(--radius-sm);
   transition: all var(--transition-fast);
+  white-space: nowrap;
+  text-decoration: none;
 }
 .home-switch-badge:hover {
   background: var(--color-blaze);
   color: #fff;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--color-blaze-glow);
 }
 
 .theme-toggle-btn, .rtl-toggle-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-subtle);
-  background: var(--bg-surface);
-  color: var(--text-muted);
-  font-size: 0.85rem;
+  background: var(--bg-surface-elevated);
+  color: var(--text-main);
+  font-size: 0.88rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .theme-toggle-btn:hover, .rtl-toggle-btn:hover {
   border-color: var(--color-blaze);
   color: var(--color-blaze);
+  background: var(--bg-surface-hover);
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
@@ -410,7 +419,7 @@ ul, ol {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-5);
 }
 
 .nav-link {
@@ -521,6 +530,12 @@ ul, ol {
   transition: right var(--transition-smooth);
   box-shadow: -15px 0 40px rgba(0, 0, 0, 0.85);
   overflow-y: auto;
+  text-align: center;
+}
+
+.mobile-drawer .brand-logo {
+  justify-content: center;
+  text-align: center;
 }
 
 .mobile-drawer.is-open {
@@ -532,26 +547,28 @@ ul, ol {
   flex-direction: column;
   gap: var(--space-4);
   margin-top: var(--space-6);
+  text-align: center;
 }
 
 .mobile-nav-link {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-2) 0;
+  display: block;
+  text-align: center;
+  padding: var(--space-3) 0;
   border-bottom: 1px solid var(--border-subtle);
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .mobile-nav-link:hover, .mobile-nav-link.active {
   color: var(--color-blaze);
-  padding-left: var(--space-2);
+  padding-left: 0;
+  background: rgba(224, 93, 38, 0.06);
+  border-radius: var(--radius-sm);
 }
 
 .mobile-drawer-backdrop {
@@ -568,6 +585,48 @@ ul, ol {
 .mobile-drawer-backdrop.is-active {
   opacity: 1;
   pointer-events: auto;
+}
+
+.mobile-drawer-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-drawer-actions .theme-toggle-btn,
+.mobile-drawer-actions .rtl-toggle-btn {
+  flex: 1;
+  height: 40px;
+  width: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-drawer-actions .theme-toggle-btn:hover,
+.mobile-drawer-actions .rtl-toggle-btn:hover {
+  border-color: var(--color-blaze);
+  color: var(--color-blaze);
+  background: rgba(224, 93, 38, 0.1);
+}
+
+.mobile-nav-link[href*="coming-soon"],
+.mobile-nav-list li:has(a[href*="coming-soon"]) {
+  display: none !important;
 }
 
 /* ==========================================================================
@@ -669,6 +728,15 @@ ul, ol {
   perspective: 1000px;
 }
 
+.tilt-card h2,
+.tilt-card h3,
+.tilt-card h4,
+.tilt-card p,
+.tilt-card span,
+.tilt-card div {
+  text-align: center;
+}
+
 .tilt-card::before {
   content: "";
   position: absolute;
@@ -744,6 +812,7 @@ ul, ol {
 .card-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-1);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -756,6 +825,7 @@ ul, ol {
   padding: 2px 8px;
   border-radius: var(--radius-sm);
   margin-bottom: var(--space-3);
+  text-align: center;
 }
 
 .card-title {
@@ -765,8 +835,14 @@ ul, ol {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--text-main);
-  margin-bottom: var(--space-2);
-  line-height: 1.2;
+  margin-bottom: var(--space-3);
+  line-height: 1.25;
+  text-align: center;
+  width: 100%;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-desc {
@@ -774,18 +850,28 @@ ul, ol {
   color: var(--text-muted);
   margin-bottom: var(--space-5);
   line-height: 1.6;
-  max-width: 320px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  min-height: 4.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
 }
 
-/* Card Specs Chips (Center-Aligned) */
+/* Card Specs Chips (Center-Aligned & Equal Baseline) */
 .card-specs-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
+  margin-top: auto;
   margin-bottom: var(--space-5);
   width: 100%;
+  min-height: 52px;
+  text-align: center;
 }
 
 .spec-chip {
@@ -796,9 +882,10 @@ ul, ol {
   color: var(--color-khaki);
   padding: 3px 8px;
   border-radius: var(--radius-sm);
+  text-align: center;
 }
 
-/* Card Price & Action (Center-Aligned) */
+/* Card Price & Action (Center-Aligned & Bottom Pinned) */
 .card-footer {
   margin-top: auto;
   width: 100%;
@@ -809,6 +896,7 @@ ul, ol {
   gap: var(--space-3);
   position: relative;
   z-index: 2;
+  text-align: center;
 }
 
 .card-price {
@@ -817,6 +905,7 @@ ul, ol {
   font-weight: 800;
   color: var(--color-blaze);
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 /* Product Card Image Wrapper */
@@ -889,7 +978,7 @@ ul, ol {
 .hero-1-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #0a0d0c 0%, rgba(10, 13, 12, 0.85) 50%, rgba(10, 13, 12, 0.4) 100%),
+  background: radial-gradient(circle at center, rgba(10, 13, 12, 0.55) 0%, rgba(10, 13, 12, 0.9) 100%),
               linear-gradient(to top, #0a0d0c 0%, transparent 60%);
   z-index: 1;
 }
@@ -897,12 +986,15 @@ ul, ol {
 .hero-1-content {
   position: relative;
   z-index: 2;
-  max-width: 720px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-badge-group {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: var(--space-3);
   margin-bottom: var(--space-5);
@@ -917,6 +1009,7 @@ ul, ol {
   letter-spacing: 0.02em;
   margin-bottom: var(--space-5);
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
 
 .hero-title .highlight {
@@ -929,11 +1022,16 @@ ul, ol {
   color: var(--text-muted);
   margin-bottom: var(--space-8);
   line-height: 1.7;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .hero-cta-group {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: var(--space-4);
   margin-bottom: var(--space-10);
@@ -945,6 +1043,9 @@ ul, ol {
   gap: var(--space-6);
   padding-top: var(--space-6);
   border-top: 1px solid var(--border-subtle);
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .telem-item {
@@ -1048,6 +1149,9 @@ ul, ol {
   border-radius: var(--radius-md);
   padding: var(--space-8);
   box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .calc-grid {
@@ -1062,6 +1166,9 @@ ul, ol {
   flex-direction: column;
   gap: var(--space-2);
   text-align: left;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-label {
@@ -1074,6 +1181,9 @@ ul, ol {
 }
 
 .form-control {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   background: var(--bg-surface-elevated);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
@@ -1081,6 +1191,15 @@ ul, ol {
   color: var(--text-main);
   font-size: 0.95rem;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+select.form-control {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .form-control:focus {
@@ -1125,6 +1244,48 @@ ul, ol {
   color: var(--color-blaze);
   line-height: 1;
   margin: var(--space-2) 0;
+}
+
+/* Expedition Pack Weight Calculator Item Hover Effects */
+.calc-gear-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface-elevated);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.calc-gear-item:hover {
+  background: #19241d;
+  border-color: var(--color-blaze);
+  transform: translateX(6px);
+  box-shadow: 0 4px 20px rgba(224, 93, 38, 0.2);
+}
+
+.calc-gear-item .weight-tag {
+  font-family: var(--font-mono);
+  color: var(--color-blaze);
+  font-weight: 700;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.calc-gear-item:hover .weight-tag {
+  color: #ff6b35;
+  transform: scale(1.08);
+}
+
+.calc-gear-item input[type="checkbox"] {
+  transition: transform 0.2s ease;
+}
+
+.calc-gear-item:hover input[type="checkbox"] {
+  transform: scale(1.25);
 }
 
 /* ==========================================================================
@@ -1185,6 +1346,33 @@ ul, ol {
   padding: 8px 14px;
   font-size: 0.9rem;
   color: var(--text-main);
+}
+
+/* Center Catalog Toolbar in Mobile, Tablet, and 1024px Viewports */
+@media (max-width: 1200px) {
+  .catalog-toolbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: var(--space-4) !important;
+  }
+
+  .category-pills {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .catalog-controls-wrap {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .catalog-search-wrap {
+    justify-content: center !important;
+    max-width: 380px;
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
@@ -1341,6 +1529,35 @@ ul, ol {
   max-width: 320px;
 }
 
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-elevated);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-icon-btn:hover {
+  border-color: var(--color-blaze);
+  color: var(--color-blaze);
+  background: var(--bg-surface-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--color-blaze-glow);
+}
+
 .footer-heading {
   font-family: var(--font-display);
   font-size: 1.15rem;
@@ -1433,24 +1650,58 @@ ul, ol {
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. MOBILE LAYOUT (< 640px)
-   - Single-column layouts
-   - Hamburger drawer
-   - Touch-friendly min 44px buttons
-   - Zero horizontal overflow
-   - Strictly center-aligned cards
+   NAVIGATION RESPONSIVE BREAKPOINT (<= 1200px: Mobile, Tablet & 1024px Viewports)
+   Hamburger drawer active for all mobile, tablet and 1024px screen widths
    -------------------------------------------------------------------------- */
-@media (max-width: 639.98px) {
+@media (max-width: 1199.98px) {
   .nav-menu, .nav-cta-btn {
-    display: none;
+    display: none !important;
+  }
+
+  .site-header .navbar-action-group .theme-toggle-btn,
+  .site-header .navbar-action-group .rtl-toggle-btn {
+    display: none !important;
   }
 
   .mobile-nav-toggle {
-    display: flex;
+    display: flex !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   1. MOBILE LAYOUT (< 640px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 639.98px) {
+  html, body {
+    overflow-x: clip !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background: rgba(15, 19, 17, 0.96) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: var(--space-4) !important;
+    padding-right: var(--space-4) !important;
   }
 
   .grid-2, .grid-3, .grid-4 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     gap: var(--space-6);
   }
 
@@ -1467,8 +1718,37 @@ ul, ol {
     width: 100%;
   }
 
-  .hero-cta-group .btn {
-    width: 100%;
+  /* Universal Mobile Button Uniform Sizing Rule */
+  .btn,
+  a.btn,
+  button.btn,
+  .hero-cta-group .btn,
+  form .btn {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 12px 14px !important;
+    font-size: clamp(0.78rem, 3.4vw, 0.88rem) !important;
+    line-height: 1.2 !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    white-space: nowrap !important;
+  }
+
+  form .form-control,
+  form input[type="email"],
+  form input[type="text"],
+  form input[type="tel"],
+  form button[type="submit"] {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center;
   }
 
   .hero-telemetry-grid {
@@ -1484,19 +1764,114 @@ ul, ol {
 
   .calc-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .calc-valuation-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  .calc-btn-wrap {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  /* Floating Back-to-Top Button Mobile Positioning */
+  .back-to-top {
+    bottom: 12px !important;
+    right: 12px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 0.85rem !important;
+    z-index: 99 !important;
+    opacity: 0.9 !important;
+  }
+
+  /* Responsive Heading & Text Scaling to prevent mobile character clipping */
+  h1, h2, h3, h4, .section-title, .card-title {
+    font-size: clamp(1.15rem, 5.2vw, 1.55rem) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  p, .section-subtitle, .card-desc {
+    font-size: clamp(0.82rem, 3.4vw, 0.92rem) !important;
+    line-height: 1.5 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  /* Center tag, heading, and paragraph text in tool-box, FAQ containers & section blocks on mobile */
+  .tool-box {
+    padding: var(--space-5) var(--space-4) 40px var(--space-4) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    text-align: center !important;
+  }
+
+  .tilt-card {
+    padding: var(--space-5) var(--space-4) 36px var(--space-4) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .faq-container-block {
+    text-align: center !important;
+  }
+
+  .tool-box > .section-tag,
+  .tool-box > .card-badge,
+  .faq-container-block > .section-tag,
+  .faq-container-block > .card-badge {
+    display: inline-flex !important;
+    margin: 0 auto 12px auto !important;
+    text-align: center !important;
+  }
+
+  .tool-box > h1,
+  .tool-box > h2,
+  .tool-box > h3,
+  .tool-box > h4,
+  .tool-box > p,
+  .faq-container-block > h1,
+  .faq-container-block > h2,
+  .faq-container-block > h3,
+  .faq-container-block > h4,
+  .faq-container-block > p {
+    text-align: center !important;
   }
 
   .catalog-toolbar {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .category-pills {
     justify-content: center;
+    width: 100%;
+  }
+
+  .catalog-controls-wrap {
+    justify-content: center;
+    width: 100%;
   }
 
   .catalog-search-wrap {
-    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
   }
 
   .footer-grid {
@@ -1515,12 +1890,44 @@ ul, ol {
     text-align: center;
   }
 
-  .ticker-telemetry {
-    display: none;
+  .top-ticker-bar {
+    display: block;
+    padding: var(--space-2) 0;
+    width: 100%;
+    overflow: hidden;
   }
 
   .top-ticker-inner {
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 var(--space-3) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ticker-telemetry {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .ticker-telemetry span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+    font-size: 0.72rem !important;
+    line-height: 1.35 !important;
   }
 
   .section-pad {
@@ -1535,22 +1942,24 @@ ul, ol {
 
 /* --------------------------------------------------------------------------
    2. TABLET LAYOUT (640px – 1023px)
-   - Balanced 2-column grids
-   - Adjusted spacing
-   - Clean navigation wrapping
    -------------------------------------------------------------------------- */
 @media (min-width: 640px) and (max-width: 1023.98px) {
-  .nav-menu {
-    gap: var(--space-4);
+  .top-ticker-inner {
+    justify-content: center;
   }
 
-  .nav-link {
-    font-size: 0.95rem;
+  .ticker-telemetry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px 24px;
+    text-align: center;
+    font-size: 0.78rem;
   }
 
-  .nav-cta-btn {
-    padding: 8px 16px;
-    font-size: 0.88rem;
+  .ticker-telemetry span {
+    white-space: nowrap;
   }
 
   .grid-2 {
@@ -1563,6 +1972,54 @@ ul, ol {
 
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Last card centered when sitting on an incomplete row in 2-column tablet layout (maintaining exact single-card width) */
+  .grid-3 > :last-child:nth-child(odd),
+  .grid-4 > :last-child:nth-child(odd),
+  .grid-3 > .is-last-centered-2col,
+  .grid-4 > .is-last-centered-2col {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - var(--space-6)) / 2);
+  }
+
+  .grid-2 > :last-child:nth-child(odd),
+  .grid-2 > .is-last-centered-2col {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - var(--space-8)) / 2);
+  }
+
+  .calc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .calc-grid .form-group {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .calc-grid .form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .calc-valuation-card {
+    justify-content: space-around !important;
+    text-align: center !important;
+  }
+
+  .calc-btn-wrap {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 10px;
   }
 
   .hero-2-grid {
@@ -1607,6 +2064,22 @@ ul, ol {
 
   .grid-3 {
     gap: var(--space-5);
+  }
+
+  /* Last card centered when sitting on an incomplete row in 1024px layout (maintaining exact single-card width) */
+  .grid-4 > :last-child:nth-child(3n+1),
+  .grid-3 > :last-child:nth-child(3n+1),
+  .grid-4 > .is-last-centered-3col,
+  .grid-3 > .is-last-centered-3col {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .grid-2 > :last-child:nth-child(odd),
+  .grid-2 > .is-last-centered-2col {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - var(--space-8)) / 2);
   }
 
   .hero-title {

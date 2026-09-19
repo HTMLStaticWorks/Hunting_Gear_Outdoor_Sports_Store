@@ -13,6 +13,9 @@
   <meta property="og:description" content="Engineered for the hunt. Built for the wild. Field-tested precision optics, technical apparel, and survival gear.">
   <meta property="og:image" content="../assets/images/hero-hunter-dawn.jpg">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
@@ -49,32 +52,24 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to Main Field Content</a>
 
-  <!-- TOP TICKER BAR: Telemetry & Home 2 Expedition Quick Switch -->
-  <aside class="top-ticker-bar" aria-label="Field Telemetry and Navigation Options">
+  <!-- TOP TICKER BAR: Telemetry -->
+  <aside class="top-ticker-bar" aria-label="Field Telemetry">
     <div class="container top-ticker-inner">
       <div class="ticker-telemetry">
         <span><span class="status-dot"></span> NORTHERN ROCKIES SECTOR: AUTUMN SEASON ACTIVE</span>
         <span>LAT: 45.6770° N | LON: 111.0429° W</span>
         <span>ELEV: 4,820 FT</span>
       </div>
-      <div class="top-action-group">
-        <!-- Prominent Home 2 Link (avoids cluttering navbar) -->
-        <a href="home-2.html" class="home-switch-badge" title="Switch to High-Alpine Expedition Storyline">
-          <span>⚡ EXPEDITION MODE (HOME 2)</span>
-        </a>
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
-        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
-      </div>
     </div>
   </aside>
 
-  <!-- PRIMARY SITE HEADER & NAVBAR (Strictly 5 items, No Login, No Dashboard) -->
+  <!-- PRIMARY SITE HEADER & NAVBAR -->
   <header class="site-header">
     <div class="container">
       <nav class="navbar" aria-label="Primary Expedition Navigation">
         <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
           <div class="brand-emblem" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5zM11 11h2v4h-2zm0 5h2v2h-2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
           </div>
           <div>
             VANGUARD
@@ -82,18 +77,23 @@
           </div>
         </a>
 
-        <!-- Desktop Menu: Exactly 5 items -->
+        <!-- Desktop Menu -->
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="home-2.html" class="nav-link">Home 2</a></li>
           <li><a href="products.html" class="nav-link">Products</a></li>
           <li><a href="safety-regulations.html" class="nav-link">Safety &amp; Regulations</a></li>
           <li><a href="trade-in.html" class="nav-link">Trade-In</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
 
-        <a href="contact.html" class="nav-cta-btn">
-          <span>DISPATCH ENQUIRY</span>
-        </a>
+        <div class="navbar-action-group">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+          <a href="contact.html" class="nav-cta-btn">
+            <span>DISPATCH ENQUIRY</span>
+          </a>
+        </div>
 
         <!-- Mobile Hamburger Toggle -->
         <button type="button" class="mobile-nav-toggle" aria-label="Toggle Mobile Navigation" aria-expanded="false">
@@ -110,25 +110,28 @@
     <div>
       <div class="brand-logo">
         <div class="brand-emblem">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
         </div>
         <div>
           VANGUARD
           <span class="brand-text-sub">FIELD NAVIGATION</span>
         </div>
       </div>
+      <div class="mobile-drawer-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+      </div>
       <ul class="mobile-nav-list">
-        <li><a href="index.html" class="mobile-nav-link active"><span>01. Home</span> <span>→</span></a></li>
-        <li><a href="home-2.html" class="mobile-nav-link" style="color: var(--color-blaze);"><span>02. Home 2 (Expedition)</span> <span>⚡</span></a></li>
-        <li><a href="products.html" class="mobile-nav-link"><span>03. Products Vault</span> <span>→</span></a></li>
-        <li><a href="safety-regulations.html" class="mobile-nav-link"><span>04. Safety &amp; Regs</span> <span>→</span></a></li>
-        <li><a href="trade-in.html" class="mobile-nav-link"><span>05. Trade-In Program</span> <span>→</span></a></li>
-        <li><a href="contact.html" class="mobile-nav-link"><span>06. Contact Outpost</span> <span>→</span></a></li>
-        <li><a href="coming-soon.html" class="mobile-nav-link"><span>07. Thermal Drops</span> <span>✦</span></a></li>
+        <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+        <li><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
+        <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+        <li><a href="safety-regulations.html" class="mobile-nav-link">Safety &amp; Regulations</a></li>
+        <li><a href="trade-in.html" class="mobile-nav-link">Trade-In</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
     </div>
     <div>
-      <a href="contact.html" class="btn btn-primary btn-block">DISPATCH PRO-STAFF</a>
+      <a href="contact.html" class="btn btn-primary btn-block">DISPATCH ENQUIRY</a>
       <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); margin-top: 16px; text-align: center;">VANGUARD OUTPOST &bull; BOZEMAN, MT</p>
     </div>
   </div>
@@ -307,9 +310,8 @@
 
         <div class="grid-3">
           <div class="tilt-card" data-max-tilt="12">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            <div class="card-img-wrap">
+              <img src="../assets/images/matrix-aircraft-alloy.jpg" alt="Aircraft 7075-T6 Alloy Scope Housing CNC Machining" loading="lazy">
             </div>
             <span class="card-badge">BALLISTIC GRADE</span>
             <h3 class="card-title">AIRCRAFT 7075-T6 ALLOY</h3>
@@ -321,9 +323,8 @@
           </div>
 
           <div class="tilt-card" data-max-tilt="12">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+            <div class="card-img-wrap">
+              <img src="../assets/images/matrix-submersion-seal.jpg" alt="Submersion Hermetic Seal Glacial Water Testing" loading="lazy">
             </div>
             <span class="card-badge">HYDRO-SHIELD PROOF</span>
             <h3 class="card-title">SUBMERSION HERMETIC SEAL</h3>
@@ -335,9 +336,8 @@
           </div>
 
           <div class="tilt-card" data-max-tilt="12">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+            <div class="card-img-wrap">
+              <img src="../assets/images/matrix-stealth-fabric.jpg" alt="Micro-Suede Stealth Fabric Acoustic Friction Suppression" loading="lazy">
             </div>
             <span class="card-badge">SILENT MOVEMENT</span>
             <h3 class="card-title">MICRO-SUEDE STEALTH FABRIC</h3>
@@ -364,9 +364,8 @@
 
         <div class="grid-3">
           <article class="tilt-card" data-max-tilt="14">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <div class="card-img-wrap">
+              <img src="../assets/images/report-alaska-dall-sheep.jpg" alt="Alaska Brooks Range Dall Sheep Scouting Expedition" loading="lazy">
             </div>
             <span class="card-badge">ALASKA BROOKS RANGE &bull; DALL SHEEP</span>
             <h3 class="card-title">&ldquo;CLEAR GLASS AT LAST LIGHT&rdquo;</h3>
@@ -378,9 +377,8 @@
           </article>
 
           <article class="tilt-card" data-max-tilt="14">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <div class="card-img-wrap">
+              <img src="../assets/images/report-montana-archery-elk.jpg" alt="Montana Missouri Breaks Archery Elk Bowhunt" loading="lazy">
             </div>
             <span class="card-badge">MONTANA MISSOURI BREAKS &bull; ARCHERY ELK</span>
             <h3 class="card-title">&ldquo;ZERO SOUND AT 22 YARDS&rdquo;</h3>
@@ -392,9 +390,8 @@
           </article>
 
           <article class="tilt-card" data-max-tilt="14">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <div class="card-img-wrap">
+              <img src="../assets/images/report-yukon-moose-packout.jpg" alt="Yukon Territory Moose Packout Load-Hauler Outfitting" loading="lazy">
             </div>
             <span class="card-badge">YUKON TERRITORY &bull; MOOSE PACKOUT</span>
             <h3 class="card-title">&ldquo;HAULED 130 LBS OF QUARTERS&rdquo;</h3>
@@ -478,7 +475,7 @@
             <div style="display: flex; gap: 8px; flex-direction: column;">
               <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                 <input type="email" id="newsletter-email" class="form-control" placeholder="Enter wilderness radio/email address" required style="flex: 1; min-width: 240px;" aria-label="Wilderness Radio or Email Address">
-                <button type="submit" class="btn btn-primary" style="flex-shrink: 0;">ENLIST IN DISPATCH</button>
+                <button type="submit" class="btn btn-primary">ENLIST IN DISPATCH</button>
               </div>
               <span class="error-msg" data-error-for="newsletter-email">Please enter a valid wilderness radio or email address.</span>
             </div>
@@ -495,22 +492,31 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="brand-logo">
+          <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
             <div class="brand-emblem" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
             </div>
             <div>
               VANGUARD
-              <span class="brand-text-sub">OUTPOST &bull; BOZEMAN, MT</span>
+              <span class="brand-text-sub">OUTPOST &bull; MONTANA</span>
             </div>
-          </div>
+          </a>
           <p>
             Equipping backcountry hunters, high-angle precision marksmen, and wilderness expeditions with uncompromising field hardware.
           </p>
-          <div style="display: flex; gap: 12px; margin-top: 16px;">
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="theme-toggle-btn" aria-label="Follow us on Instagram">IG</a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="theme-toggle-btn" aria-label="Watch field videos on YouTube">YT</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="theme-toggle-btn" aria-label="Join our Facebook community">FB</a>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="Follow Vanguard Outpost on Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Follow Vanguard Outpost on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Watch field videos on YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Follow Vanguard Outpost on X" title="X (Twitter)">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
           </div>
         </div>
 

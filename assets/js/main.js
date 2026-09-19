@@ -51,10 +51,12 @@
         htmlEl.setAttribute('dir', next);
         localStorage.setItem('vanguard_dir', next);
         AppState.dir = next;
+        updateRtlIcons(next);
       });
     });
 
     updateThemeIcons(AppState.theme);
+    updateRtlIcons(AppState.dir);
   }
 
   function updateThemeIcons(theme) {
@@ -62,6 +64,14 @@
     themeBtns.forEach(btn => {
       btn.innerHTML = theme === 'light' ? '🌙' : '☀️';
       btn.setAttribute('aria-label', theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+    });
+  }
+
+  function updateRtlIcons(dir) {
+    const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
+    rtlBtns.forEach(btn => {
+      btn.textContent = dir === 'rtl' ? 'RTL' : 'LTR';
+      btn.setAttribute('aria-label', dir === 'rtl' ? 'Switch to LTR Layout' : 'Switch to RTL Layout');
     });
   }
 
@@ -241,14 +251,27 @@
         visibleCards.sort((a, b) => parseFloat(b.getAttribute('data-rating') || 0) - parseFloat(a.getAttribute('data-rating') || 0));
       }
 
-      // Hide all first
-      cards.forEach(card => card.style.display = 'none');
+      // Hide all first and remove helper classes
+      cards.forEach(card => {
+        card.style.display = 'none';
+        card.classList.remove('is-last-centered-2col', 'is-last-centered-3col');
+      });
 
       // Append and display filtered
       visibleCards.forEach(card => {
         card.style.display = '';
         catalogGrid.appendChild(card);
       });
+
+      if (visibleCards.length > 0) {
+        const lastCard = visibleCards[visibleCards.length - 1];
+        if (visibleCards.length % 2 === 1) {
+          lastCard.classList.add('is-last-centered-2col');
+        }
+        if (visibleCards.length % 3 === 1) {
+          lastCard.classList.add('is-last-centered-3col');
+        }
+      }
 
       // No results notice
       let noResultEl = document.getElementById('no-results-msg');
