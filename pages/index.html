@@ -91,7 +91,7 @@
           <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
           <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
           <a href="contact.html" class="nav-cta-btn">
-            <span>DISPATCH ENQUIRY</span>
+            <span>CALL DISPATCH</span>
           </a>
         </div>
 
@@ -107,20 +107,19 @@
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div>
-      <div class="brand-logo">
-        <div class="brand-emblem">
-          <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
-        </div>
-        <div>
-          VANGUARD
-          <span class="brand-text-sub">FIELD NAVIGATION</span>
-        </div>
+    <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
+          <div class="brand-emblem" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
+          </div>
+          <div>
+            VANGUARD
+            <span class="brand-text-sub">OUTPOST &bull; MONTANA</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
       </div>
-      <div class="mobile-drawer-actions">
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
-        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
-      </div>
+      <div>
       <ul class="mobile-nav-list">
         <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
         <li><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
@@ -129,9 +128,13 @@
         <li><a href="trade-in.html" class="mobile-nav-link">Trade-In</a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
+      <div class="mobile-drawer-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+      </div>
     </div>
     <div>
-      <a href="contact.html" class="btn btn-primary btn-block">DISPATCH ENQUIRY</a>
+      <a href="contact.html" class="btn btn-primary btn-block">CALL DISPATCH</a>
       <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); margin-top: 16px; text-align: center;">VANGUARD OUTPOST &bull; BOZEMAN, MT</p>
     </div>
   </div>
@@ -191,7 +194,7 @@
     </section>
 
     <!-- SECTION 2: FEATURED SEASONAL SPOTLIGHT (3D Tilt Cards, Center-Aligned) -->
-    <section class="section-pad" id="section-2-spotlight" style="background: #0d120f;">
+    <section class="section-pad" id="section-2-spotlight" style="background: var(--bg-surface);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">ESSENTIAL ARSENAL</span>
@@ -207,21 +210,16 @@
             <div class="card-img-wrap">
               <img src="../assets/images/product-optics-scope.jpg" alt="Apex Horizon 4-24x50mm Tactical Hunting Riflescope" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 3v18M3 12h18"/></svg>
-            </div>
             <span class="card-badge">PRECISION OPTICS</span>
-            <h3 class="card-title">APEX HORIZON 4-24X50</h3>
-            <p class="card-desc">Zero-stop locking turrets with illuminated BDC reticle and extra-low dispersion fluorite glass.</p>
+            <h3 class="card-title">APEX HORIZON 4-24X50 SCOPE</h3>
+            <p class="card-desc">Sub-MOA resolution with zero-stop turrets and HD fluorite glass elements for 1,000+ yard holds.</p>
             <div class="card-specs-list">
-              <span class="spec-chip">30mm Monotube</span>
+              <span class="spec-chip">Zero-Stop Turrets</span>
               <span class="spec-chip">Argon Purged</span>
-              <span class="spec-chip">99.2% Light</span>
             </div>
             <div class="card-footer">
               <div class="card-price">$1,299</div>
-              <a href="products.html" class="btn btn-primary btn-block">INSPECT OPTIC</a>
+              <a href="products.html" class="btn btn-primary btn-block">VIEW IN CATALOG</a>
             </div>
           </article>
 
@@ -230,67 +228,52 @@
             <div class="card-img-wrap">
               <img src="../assets/images/product-apparel-jacket.jpg" alt="Vanguard TimberGhost Stealth Camo All-Weather Shell" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg>
-            </div>
-            <span class="card-badge">WEATHER ARMOR</span>
-            <h3 class="card-title">TIMBERGHOST SHELL</h3>
-            <p class="card-desc">3-layer breathable membrane with silent brushed microsuede exterior and articulated draw elbows.</p>
+            <span class="card-badge">STEALTH APPAREL</span>
+            <h3 class="card-title">TIMBERLINE GORE-TEX JACKET</h3>
+            <p class="card-desc">Soundless brushed suede face with 100% windproof GORE-TEX Pro membrane for late-season tree stands.</p>
             <div class="card-specs-list">
-              <span class="spec-chip">28k Waterproof</span>
-              <span class="spec-chip">Sub-Zero Lining</span>
-              <span class="spec-chip">Zero Scent-Lock</span>
+              <span class="spec-chip">Sub-Zero Insulation</span>
+              <span class="spec-chip">Noise-Free Weave</span>
             </div>
             <div class="card-footer">
-              <div class="card-price">$485</div>
-              <a href="products.html" class="btn btn-primary btn-block">INSPECT SHELL</a>
+              <div class="card-price">$449</div>
+              <a href="products.html" class="btn btn-primary btn-block">VIEW IN CATALOG</a>
             </div>
           </article>
 
-          <!-- Item 3: Archery -->
+          <!-- Item 3: Thermal Monocular -->
           <article class="tilt-card" data-max-tilt="16">
             <div class="card-img-wrap">
-              <img src="../assets/images/product-archery-bow.jpg" alt="Valkyrie Carbon 33 Compound Hunting Bow" loading="lazy">
+              <img src="../assets/images/product-thermal-binos.jpg" alt="GhostRay 640 Thermal Night Scanner" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M21.71 2.29a1 1 0 00-1.42 0l-5.6 5.6 1.42 1.42 5.6-5.6a1 1 0 000-1.42zM12 4a8 8 0 108 8 8 8 0 00-8-8zm0 14a6 6 0 116-6 6 6 0 01-6 6z"/></svg>
-            </div>
-            <span class="card-badge">SILENT ARCHERY</span>
-            <h3 class="card-title">VALKYRIE CARBON 33</h3>
-            <p class="card-desc">Ultralight carbon hollow-core riser delivering 346 FPS with 85% let-off dead-stop back wall.</p>
+            <span class="card-badge">THERMAL HARDWARE</span>
+            <h3 class="card-title">GHOSTRAY 640 THERMAL SCANNER</h3>
+            <p class="card-desc">640x512 uncooled microbolometer sensor detecting thermal game signatures through thick fog &amp; pitch night.</p>
             <div class="card-specs-list">
-              <span class="spec-chip">346 FPS IBO</span>
-              <span class="spec-chip">3.8 LBS Mass</span>
-              <span class="spec-chip">Dual-Cam Sync</span>
+              <span class="spec-chip">640x512 Core</span>
+              <span class="spec-chip">50Hz Refresh</span>
             </div>
             <div class="card-footer">
-              <div class="card-price">$1,380</div>
-              <a href="products.html" class="btn btn-primary btn-block">INSPECT BOW</a>
+              <div class="card-price">$1,899</div>
+              <a href="products.html" class="btn btn-primary btn-block">VIEW IN CATALOG</a>
             </div>
           </article>
 
           <!-- Item 4: Pack -->
           <article class="tilt-card" data-max-tilt="16">
             <div class="card-img-wrap">
-              <img src="../assets/images/product-pack-expedition.jpg" alt="Kodiak 6500 Expedition Load-Hauler Hunting Backpack" loading="lazy">
+              <img src="../assets/images/product-pack-expedition.jpg" alt="Summit Hauler 7500 Carbon Frame Expedition Pack" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-            </div>
-            <span class="card-badge">EXPEDITION PACK</span>
-            <h3 class="card-title">KODIAK 6500 HAULER</h3>
-            <p class="card-desc">Carbon-composite frame system capable of 140-lb meat-shelf loadouts without shoulder compression.</p>
+            <span class="card-badge">EXPEDITION GEAR</span>
+            <h3 class="card-title">SUMMIT HAULER 7500 PACK</h3>
+            <p class="card-desc">Ultra-light carbon fiber frame with integrated 150-lb rated meat hauling shelf for wilderness packouts.</p>
             <div class="card-specs-list">
-              <span class="spec-chip">105L Volume</span>
-              <span class="spec-chip">Cordura 1000D</span>
-              <span class="spec-chip">Rifle Scabbard</span>
+              <span class="spec-chip">Carbon Frame</span>
+              <span class="spec-chip">7,500 Cu In</span>
             </div>
             <div class="card-footer">
-              <div class="card-price">$620</div>
-              <a href="products.html" class="btn btn-primary btn-block">INSPECT PACK</a>
+              <div class="card-price">$599</div>
+              <a href="products.html" class="btn btn-primary btn-block">VIEW IN CATALOG</a>
             </div>
           </article>
         </div>
@@ -298,7 +281,7 @@
     </section>
 
     <!-- SECTION 3: CRAFTSMANSHIP & BALLISTICS DURABILITY MATRIX -->
-    <section class="section-pad" id="section-3-matrix" style="background: #090c0b; position: relative;">
+    <section class="section-pad" id="section-3-matrix" style="background: var(--bg-base); position: relative;">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">ENGINEERING STANDARDS</span>
@@ -352,7 +335,7 @@
     </section>
 
     <!-- SECTION 4: VERIFIED FIELD REPORTS & PRO-STAFF ENDORSEMENTS -->
-    <section class="section-pad" id="section-4-reports" style="background: #0f1411;">
+    <section class="section-pad" id="section-4-reports" style="background: var(--bg-surface);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">TESTED BY PROFESSIONALS</span>
@@ -406,7 +389,7 @@
     </section>
 
     <!-- SECTION 5: HUNTING SEASON REGULATORY & SAFETY INTELLIGENCE PREVIEW -->
-    <section class="section-pad" id="section-5-regulations" style="background: #0a0d0c; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <section class="section-pad" id="section-5-regulations" style="background: var(--bg-base); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">HUNTER COMPLIANCE &amp; SAFETY</span>
@@ -459,7 +442,7 @@
     </section>
 
     <!-- SECTION 6: OUTPOST FIELD DISPATCH & NEWSLETTER (Call to Action) -->
-    <section class="section-pad" id="section-6-dispatch" style="background: linear-gradient(135deg, #111a14, #0b100d); position: relative;">
+    <section class="section-pad" id="section-6-dispatch" style="position: relative;">
       <div class="container" style="position: relative; z-index: 2;">
         <div class="tilt-card" data-max-tilt="8" style="padding: var(--space-12) var(--space-8); max-width: 860px; margin: 0 auto; border: 1.5px solid var(--border-accent);">
           <div class="card-icon-wrap" aria-hidden="true" style="width: 72px; height: 72px;">

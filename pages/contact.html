@@ -106,20 +106,19 @@
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div>
-      <div class="brand-logo">
-        <div class="brand-emblem">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
+        <div class="brand-emblem" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
         </div>
         <div>
           VANGUARD
-          <span class="brand-text-sub">FIELD NAVIGATION</span>
+          <span class="brand-text-sub">OUTPOST &bull; DISPATCH</span>
         </div>
-      </div>
-      <div class="mobile-drawer-actions">
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
-        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
-      </div>
+      </a>
+      <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
+    </div>
+    <div>
       <ul class="mobile-nav-list">
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
         <li><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
@@ -128,9 +127,13 @@
         <li><a href="trade-in.html" class="mobile-nav-link">Trade-In</a></li>
         <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
       </ul>
+      <div class="mobile-drawer-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+      </div>
     </div>
     <div>
-      <a href="#contact-form-section" class="btn btn-primary btn-block">DISPATCH ENQUIRY</a>
+      <a href="#contact-form-section" class="btn btn-primary btn-block">CALL DISPATCH</a>
       <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); margin-top: 16px; text-align: center;">VANGUARD BOZEMAN HQ</p>
     </div>
   </div>
@@ -142,8 +145,9 @@
   <main id="main-content">
 
     <!-- SECTION 1: OUTPOST HEADQUARTERS HERO -->
-    <section class="section-pad" id="contact-hero" style="background: linear-gradient(180deg, #090c0b, #111814); position: relative; overflow: hidden;">
-      <div class="hero-1-bg" style="background-image: url('../assets/images/contact-outpost-store.jpg'); opacity: 0.32;"></div>
+    <section class="section-pad" id="contact-hero" style="position: relative; overflow: hidden;">
+      <div class="hero-1-bg" style="background-image: url('../assets/images/contact-outpost-store.jpg');"></div>
+      <div class="hero-1-overlay"></div>
       <div class="topography-canvas-container" aria-hidden="true">
         <canvas class="topography-canvas"></canvas>
       </div>
@@ -276,12 +280,54 @@
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7v5l3 3"/></svg>
               </div>
               <span class="card-badge">HOURS OF OPERATION</span>
-              <h3 class="card-title">FIELD READINESS SCHEDULE</h3>
-              <div class="schedule-list" style="width: 100%; text-align: center; margin-top: 12px; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.8;">
-                <div style="margin-bottom: 6px;"><strong style="color: var(--text-main);">Monday – Friday:</strong> <span style="color: var(--color-khaki);">06:00 – 20:00 MT</span></div>
-                <div style="margin-bottom: 6px;"><strong style="color: var(--text-main);">Saturday:</strong> <span style="color: var(--color-khaki);">06:00 – 19:00 MT</span></div>
-                <div style="margin-bottom: 8px;"><strong style="color: var(--text-main);">Sunday:</strong> <span style="color: var(--color-khaki);">08:00 – 17:00 MT</span></div>
-                <div style="color: var(--color-blaze); font-style: italic; font-size: 0.8rem; margin-top: 8px;">24/7 Emergency Satellite Dispatch Monitored</div>
+          <!-- Contact Quick Info Side Column -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+            <!-- Direct Dispatch Card -->
+            <div class="tool-box">
+              <span class="section-tag">DIRECT LINES</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--text-main); margin: var(--space-2) 0 var(--space-4);">COMMAND DISPATCH DIRECTORY</h3>
+              
+              <ul style="display: flex; flex-direction: column; gap: var(--space-4); font-size: 0.95rem;">
+                <li style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle);">
+                  <span style="color: var(--text-muted);">Main Outpost Desk:</span>
+                  <strong style="color: var(--color-blaze);">(406) 826-4868</strong>
+                </li>
+                <li style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle);">
+                  <span style="color: var(--text-muted);">Archery Lab Direct:</span>
+                  <strong style="color: var(--text-main);">(406) 826-4870</strong>
+                </li>
+                <li style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle);">
+                  <span style="color: var(--text-muted);">Optics Bench Direct:</span>
+                  <strong style="color: var(--text-main);">(406) 826-4872</strong>
+                </li>
+                <li style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle);">
+                  <span style="color: var(--text-muted);">VHF Radio Frequency:</span>
+                  <strong style="color: var(--color-khaki); font-family: var(--font-mono);">155.475 MHz</strong>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Operating Hours Card -->
+            <div class="tool-box">
+              <span class="section-tag">BOZEMAN SHOWROOM HOURS</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--text-main); margin: var(--space-2) 0 var(--space-4);">RANGE &amp; RETAIL TIMINGS</h3>
+              
+              <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 0.92rem; color: var(--text-muted);">
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Monday – Friday:</span>
+                  <span style="color: var(--text-main); font-weight: 600;">06:00 AM – 08:00 PM MT</span>
+                </li>
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Saturday:</span>
+                  <span style="color: var(--text-main); font-weight: 600;">06:00 AM – 08:00 PM MT</span>
+                </li>
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Sunday:</span>
+                  <span style="color: var(--color-blaze); font-weight: 600;">08:00 AM – 05:00 PM MT</span>
+                </li>
+              </ul>
+              <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border-subtle); font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-faint);">
+                * Indoor 100-yard subterranean zeroing tunnel operates during all retail hours. Appointments recommended for broadhead flight tuning.
               </div>
             </div>
           </div>
@@ -290,7 +336,7 @@
     </section>
 
     <!-- SECTION 3: INTERACTIVE FLAGSHIP MAP & FACILITY AMENITIES -->
-    <section class="section-pad" id="contact-map-section" style="background: #090c0a; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <section class="section-pad" id="contact-map-section" style="background: var(--bg-base); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">BOZEMAN FACILITY</span>
@@ -302,7 +348,7 @@
 
         <div class="tool-box" style="padding: 0; overflow: hidden; border: 1.5px solid var(--border-subtle);">
           <!-- Tactical Google Map Placeholder with Custom Coordinate Canvas -->
-          <div style="position: relative; width: 100%; height: 420px; background: #121815; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+          <div style="position: relative; width: 100%; height: 420px; background: var(--bg-surface); overflow: hidden; display: flex; align-items: center; justify-content: center;">
             <!-- Interactive Topographic Background -->
             <div class="topography-canvas-container" aria-hidden="true">
               <canvas class="topography-canvas"></canvas>
@@ -312,7 +358,7 @@
             <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(203, 187, 157, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(203, 187, 157, 0.08) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
 
             <!-- Pin Beacon -->
-            <div style="position: relative; z-index: 10; text-align: center; background: rgba(14, 20, 16, 0.92); border: 1.5px solid var(--color-blaze); padding: 20px 16px; border-radius: var(--radius-md); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85); width: 92%; max-width: 440px; box-sizing: border-box; margin: 0 auto;">
+            <div style="position: relative; z-index: 10; text-align: center; background: var(--bg-card); border: 1.5px solid var(--color-blaze); padding: 20px 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 92%; max-width: 440px; box-sizing: border-box; margin: 0 auto;">
               <div style="width: 14px; height: 14px; background: var(--color-blaze); border-radius: 50%; box-shadow: 0 0 16px var(--color-blaze); margin: 0 auto 12px; animation: pulse-green 1.8s infinite ease-in-out;"></div>
               <span class="card-badge" style="background: var(--color-blaze); color: #fff;">VANGUARD COMPOUND PIN</span>
               <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--text-main); margin-bottom: 4px;">4800 TIMBERLINE RIDGE PASS</h3>

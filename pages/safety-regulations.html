@@ -76,7 +76,7 @@
           <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
           <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
           <a href="contact.html" class="nav-cta-btn">
-            <span>REPORT HAZARD</span>
+            <span>CALL DISPATCH</span>
           </a>
         </div>
 
@@ -92,20 +92,19 @@
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div>
-      <div class="brand-logo">
-        <div class="brand-emblem">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
+        <div class="brand-emblem" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
         </div>
         <div>
           VANGUARD
-          <span class="brand-text-sub">FIELD NAVIGATION</span>
+          <span class="brand-text-sub">SAFETY &bull; HUB</span>
         </div>
-      </div>
-      <div class="mobile-drawer-actions">
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
-        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
-      </div>
+      </a>
+      <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
+    </div>
+    <div>
       <ul class="mobile-nav-list">
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
         <li><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
@@ -114,9 +113,13 @@
         <li><a href="trade-in.html" class="mobile-nav-link">Trade-In</a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
+      <div class="mobile-drawer-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+      </div>
     </div>
     <div>
-      <a href="contact.html" class="btn btn-primary btn-block">DISPATCH ENQUIRY</a>
+      <a href="contact.html" class="btn btn-primary btn-block">CALL DISPATCH</a>
       <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); margin-top: 16px; text-align: center;">VANGUARD HUNTER SAFETY</p>
     </div>
   </div>
@@ -128,8 +131,9 @@
   <main id="main-content">
 
     <!-- SECTION 1: SAFETY DIRECTIVE HERO -->
-    <section class="section-pad" id="safety-hero" style="background: linear-gradient(180deg, #090c0b, #111814); position: relative; overflow: hidden;">
-      <div class="hero-1-bg" style="background-image: url('../assets/images/safety-blaze-orange.jpg'); opacity: 0.28;"></div>
+    <section class="section-pad" id="safety-hero" style="position: relative; overflow: hidden;">
+      <div class="hero-1-bg" style="background-image: url('../assets/images/safety-blaze-orange.jpg');"></div>
+      <div class="hero-1-overlay"></div>
       <div class="topography-canvas-container" aria-hidden="true">
         <canvas class="topography-canvas"></canvas>
       </div>
@@ -137,7 +141,7 @@
       <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header">
           <div class="hero-badge-group" style="justify-content: center;">
-            <span class="section-tag" style="background: rgba(224, 93, 38, 0.25); border-color: var(--color-blaze); color: #fff;">MANDATORY CODE</span>
+            <span class="section-tag" style="background: rgba(224, 93, 38, 0.25); border-color: var(--color-blaze); color: var(--color-blaze);">MANDATORY CODE</span>
             <span class="card-badge">ZERO ACCIDENT DOCTRINE</span>
           </div>
           <h1 class="section-title">HUNT ETHICAL. RETURN SAFE.</h1>
@@ -165,7 +169,7 @@
     </section>
 
     <!-- SECTION 2: STATE & SEASONAL REGULATION MATRIX -->
-    <section class="section-pad" id="state-reg-matrix" style="background: #0d120f;">
+    <section class="section-pad" id="state-reg-matrix" style="background: var(--bg-surface);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">STATUTORY STANDARDS</span>
@@ -178,61 +182,39 @@
         <div class="grid-2">
           <!-- Guide 1: Blaze Orange Standards -->
           <div class="tilt-card" data-max-tilt="10">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg>
-            </div>
             <span class="card-badge" style="background: var(--color-blaze); color: #fff;">BLAZE ORANGE LAWS</span>
-            <h3 class="card-title">DAYLIGHT FLUORESCENT ORANGE</h3>
-            <p class="card-desc">Most big-game rifle states mandate a minimum of 400 to 500 square inches of solid blaze orange or fluorescent pink visible from all 360 degrees, including a head covering.</p>
+            <h3 class="card-title">HIGH-VISIBILITY GARMENT COMPLIANCE</h3>
+            <p class="card-desc">
+              During modern firearm big game seasons, most western and midwestern states require a minimum of 400 to 500 square inches of solid fluorescent hunter orange worn above the waist, visible from 360 degrees.
+            </p>
+            <ul style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted); text-align: left; width: 100%; display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
+              <li>&bull; Montana: 400 sq. inches of hunter orange hat/vest required for big game.</li>
+              <li>&bull; Wyoming: Solid hunter orange hat or vest mandatory during rifle season.</li>
+              <li>&bull; Idaho: Mandatory for youth hunters; highly advised state-wide.</li>
+              <li>&bull; Camo Orange: Only permitted in select states (e.g. Colorado requires solid).</li>
+            </ul>
             <div class="card-specs-list">
-              <span class="spec-chip">Montana: 400 Sq. In.</span>
-              <span class="spec-chip">Colorado: 500 Sq. In.</span>
-              <span class="spec-chip">Wyoming: Fluorescent Hat</span>
+              <span class="spec-chip">360° Visibility</span>
+              <span class="spec-chip">500 SQ IN Minimum</span>
             </div>
           </div>
 
-          <!-- Guide 2: Legal Shooting Hours -->
+          <!-- Guide 2: Tag, Permit, & CITES Compliance -->
           <div class="tilt-card" data-max-tilt="10">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7v5l3 3"/></svg>
-            </div>
-            <span class="card-badge">SOLAR CHRONOLOGY</span>
-            <h3 class="card-title">LEGAL SHOOTING HOURS</h3>
-            <p class="card-desc">Strictly enforced: exactly one-half hour before civil sunrise to one-half hour after civil sunset. Consult precise GPS-calibrated solar tables for your specific hunting unit.</p>
+            <span class="card-badge">E-TAGGING PROTOCOL</span>
+            <h3 class="card-title">TAG NOTCHING &amp; CARCASS TRANSPORT</h3>
+            <p class="card-desc">
+              Immediate physical tag notching or electronic app validation (e.g., MyFWP, WDFW e-tag) is mandatory before moving any harvested big game animal from the kill site.
+            </p>
+            <ul style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted); text-align: left; width: 100%; display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
+              <li>&bull; Immediate Notching: Month and date must be cleanly punched immediately upon kill.</li>
+              <li>&bull; Chronic Wasting Disease (CWD): Interstate transport of brain/spinal tissue is prohibited.</li>
+              <li>&bull; Proof of Sex: Head or evidence of sex must remain naturally attached to carcass.</li>
+              <li>&bull; Check Station: All hunters must stop at state highway check stations when open.</li>
+            </ul>
             <div class="card-specs-list">
-              <span class="spec-chip">GPS Synchronized</span>
-              <span class="spec-chip">Zero Night Optics</span>
-              <span class="spec-chip">Civil Twilight Tables</span>
-            </div>
-          </div>
-
-          <!-- Guide 3: Harvest Tagging & Transportation -->
-          <div class="tilt-card" data-max-tilt="10">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-            </div>
-            <span class="card-badge">CARCASS VALIDATION</span>
-            <h3 class="card-title">TAGGING &amp; EVIDENCE OF SEX</h3>
-            <p class="card-desc">You must immediately notch and attach the carcass tag prior to moving or dressing the animal. Evidence of sex (naturally attached reproductive organs or head with antlers) must remain attached.</p>
-            <div class="card-specs-list">
-              <span class="spec-chip">Immediate Notching</span>
-              <span class="spec-chip">Evidence Attached</span>
-              <span class="spec-chip">CWD Mandatory Check</span>
-            </div>
-          </div>
-
-          <!-- Guide 4: Firearm & Archery Transport -->
-          <div class="tilt-card" data-max-tilt="10">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
-            </div>
-            <span class="card-badge">CONVEYANCE CODES</span>
-            <h3 class="card-title">VEHICLE &amp; ATV TRANSPORT</h3>
-            <p class="card-desc">All firearms must be completely unloaded in both chamber and magazine while inside or mounted on any motorized vehicle, ATV, or snowmobile. Bows must be un-nocked and encased.</p>
-            <div class="card-specs-list">
-              <span class="spec-chip">Unloaded Chamber</span>
-              <span class="spec-chip">Hard-Sided Lock</span>
-              <span class="spec-chip">No Road Hunting</span>
+              <span class="spec-chip">CWD Transport Rules</span>
+              <span class="spec-chip">Proof of Sex Attached</span>
             </div>
           </div>
         </div>
@@ -240,7 +222,7 @@
     </section>
 
     <!-- SECTION 3: THE 4 COMMANDMENTS OF FIELD FIREARM & ARCHERY SAFETY -->
-    <section class="section-pad" id="commandments-section" style="background: #090c0a; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <section class="section-pad" id="commandments-section" style="background: var(--bg-base); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">UNIVERSAL PROTOCOLS</span>
@@ -315,7 +297,7 @@
     </section>
 
     <!-- SECTION 4: HUNTER EDUCATION CERTIFICATION & DNR DIRECTORY (CTA) -->
-    <section class="section-pad" id="education-cta" style="background: linear-gradient(135deg, #111a14, #0c100e); position: relative;">
+    <section class="section-pad" id="education-cta" style="position: relative;">
       <div class="container" style="position: relative; z-index: 2;">
         <div class="tilt-card" data-max-tilt="8" style="padding: var(--space-12) var(--space-8); max-width: 860px; margin: 0 auto; border: 1.5px solid var(--border-accent);">
           <div class="card-icon-wrap" aria-hidden="true" style="width: 72px; height: 72px;">

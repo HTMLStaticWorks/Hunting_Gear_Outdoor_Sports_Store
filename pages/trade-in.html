@@ -75,8 +75,8 @@
         <div class="navbar-action-group">
           <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
           <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
-          <a href="#trade-in-calc-section" class="nav-cta-btn">
-            <span>CALCULATE VALUE</span>
+          <a href="contact.html" class="nav-cta-btn">
+            <span>CALL DISPATCH</span>
           </a>
         </div>
 
@@ -92,20 +92,19 @@
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div>
-      <div class="brand-logo">
-        <div class="brand-emblem">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
+        <div class="brand-emblem" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
         </div>
         <div>
           VANGUARD
-          <span class="brand-text-sub">FIELD NAVIGATION</span>
+          <span class="brand-text-sub">TRADE-IN &bull; PROGRAM</span>
         </div>
-      </div>
-      <div class="mobile-drawer-actions">
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
-        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
-      </div>
+      </a>
+      <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
+    </div>
+    <div>
       <ul class="mobile-nav-list">
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
         <li><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
@@ -114,9 +113,13 @@
         <li><a href="trade-in.html" class="mobile-nav-link active">Trade-In</a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
+      <div class="mobile-drawer-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+      </div>
     </div>
     <div>
-      <a href="contact.html" class="btn btn-primary btn-block">DISPATCH ENQUIRY</a>
+      <a href="contact.html" class="btn btn-primary btn-block">CALL DISPATCH</a>
       <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); margin-top: 16px; text-align: center;">VANGUARD TRADE-IN VAULT</p>
     </div>
   </div>
@@ -128,8 +131,9 @@
   <main id="main-content">
 
     <!-- SECTION 1: TRADE-IN HERO -->
-    <section class="section-pad" id="trade-in-hero" style="background: linear-gradient(180deg, #090d0b, #111814); position: relative; overflow: hidden;">
-      <div class="hero-1-bg" style="background-image: url('../assets/images/trade-in-gear-bench.jpg'); opacity: 0.28;"></div>
+    <section class="section-pad" id="trade-in-hero" style="position: relative; overflow: hidden;">
+      <div class="hero-1-bg" style="background-image: url('../assets/images/trade-in-gear-bench.jpg');"></div>
+      <div class="hero-1-overlay"></div>
       <div class="topography-canvas-container" aria-hidden="true">
         <canvas class="topography-canvas"></canvas>
       </div>
@@ -164,7 +168,7 @@
     </section>
 
     <!-- SECTION 2: 4-STEP APPRAISAL WORKFLOW (3D Tilt Cards, Center-Aligned in ALL views) -->
-    <section class="section-pad" id="trade-in-steps" style="background: #0d120f;">
+    <section class="section-pad" id="trade-in-steps" style="background: var(--bg-surface);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">VERIFIED PROCESS</span>
@@ -178,53 +182,53 @@
           <!-- Step 1 -->
           <article class="tilt-card" data-max-tilt="16">
             <div class="card-icon-wrap" aria-hidden="true">
-              <span style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 900;">01</span>
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
             </div>
             <span class="card-badge">STEP 01</span>
-            <h3 class="card-title">INSTANT APPRAISAL</h3>
-            <p class="card-desc">Select your brand, model series, and physical cosmetic condition in our live calculator for an immediate guaranteed valuation.</p>
+            <h3 class="card-title">SUBMIT SPECIFICATIONS</h3>
+            <p class="card-desc">Enter your item serial, glass condition, and included factory accessories into our instant appraisal engine below.</p>
             <div class="card-specs-list">
-              <span class="spec-chip">Instant Quote</span>
-              <span class="spec-chip">No Obligation</span>
+              <span class="spec-chip">Instant Online Quote</span>
+              <span class="spec-chip">24/7 Digital Desk</span>
             </div>
           </article>
 
           <!-- Step 2 -->
           <article class="tilt-card" data-max-tilt="16">
             <div class="card-icon-wrap" aria-hidden="true">
-              <span style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 900;">02</span>
+              <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H7v4H4c-1.1 0-2 .9-2 2v10h20V10c0-1.1-.9-2-2-2zM9 6h6v2H9V6zm11 12H4v-6h16v6z"/></svg>
             </div>
             <span class="card-badge">STEP 02</span>
-            <h3 class="card-title">INSURED SHIPPING</h3>
-            <p class="card-desc">We dispatch a prepaid, foam-lined protective shipping box with prepaid FedEx Ground tracking directly to your door.</p>
+            <h3 class="card-title">FREE PREPAID SHIPMENT</h3>
+            <p class="card-desc">We transmit a prepaid UPS/FedEx label with $5,000 declared value insurance straight to your inbox.</p>
             <div class="card-specs-list">
-              <span class="spec-chip">Free Prepaid Label</span>
-              <span class="spec-chip">Fully Insured</span>
+              <span class="spec-chip">$0 Shipping Cost</span>
+              <span class="spec-chip">Full Transit Insurance</span>
             </div>
           </article>
 
           <!-- Step 3 -->
           <article class="tilt-card" data-max-tilt="16">
             <div class="card-icon-wrap" aria-hidden="true">
-              <span style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 900;">03</span>
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
             </div>
             <span class="card-badge">STEP 03</span>
-            <h3 class="card-title">BENCH INSPECTION</h3>
-            <p class="card-desc">Our technicians test optical collimation, turret tracking on a recoil bench, and limb integrity within 24 hours.</p>
+            <h3 class="card-title">24-HR BENCH INSPECTION</h3>
+            <p class="card-desc">Our optics lab verifies reticle alignment and glass resolution to confirm or boost your initial valuation quote.</p>
             <div class="card-specs-list">
-              <span class="spec-chip">24-Point Check</span>
-              <span class="spec-chip">Collimation Proof</span>
+              <span class="spec-chip">Lab Collimation Check</span>
+              <span class="spec-chip">HD Video Inspection</span>
             </div>
           </article>
 
           <!-- Step 4 -->
           <article class="tilt-card" data-max-tilt="16">
             <div class="card-icon-wrap" aria-hidden="true">
-              <span style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 900;">04</span>
+              <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
             </div>
             <span class="card-badge">STEP 04</span>
-            <h3 class="card-title">PAYOUT OR CREDIT</h3>
-            <p class="card-desc">Choose between immediate electronic direct deposit (ACH) or receive +18% bonus store credit toward new Vanguard equipment.</p>
+            <h3 class="card-title">IMMEDIATE PAYOUT / CREDIT</h3>
+            <p class="card-desc">Receive direct ACH electronic transfer or receive a +18% bonus voucher toward Vanguard store purchases.</p>
             <div class="card-specs-list">
               <span class="spec-chip">+18% Credit Bonus</span>
               <span class="spec-chip">Fast ACH Payout</span>
@@ -235,7 +239,7 @@
     </section>
 
     <!-- SECTION 3: INTERACTIVE INSTANT GEAR APPRAISAL CALCULATOR -->
-    <section class="section-pad" id="trade-in-calc-section" style="background: #090c0a; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <section class="section-pad" id="trade-in-calc-section" style="background: var(--bg-base); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">LIVE VALUATION TOOL</span>
@@ -308,8 +312,8 @@
               </div>
 
               <div>
-                <div style="font-family: var(--font-mono); font-size: 0.85rem; color: #27ae60; font-weight: 700;">OR VANGUARD STORE CREDIT (+18% BONUS):</div>
-                <div id="calc-bonus-value" style="font-family: var(--font-display); font-size: 2.8rem; font-weight: 900; color: #27ae60; line-height: 1.1;">$498</div>
+                <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-blaze); font-weight: 700;">OR VANGUARD STORE CREDIT (+18% BONUS):</div>
+                <div id="calc-bonus-value" style="font-family: var(--font-display); font-size: 2.8rem; font-weight: 900; color: var(--color-blaze); line-height: 1.1;">$498</div>
               </div>
 
               <div class="calc-btn-wrap">
@@ -325,7 +329,7 @@
     </section>
 
     <!-- SECTION 4: TRADE-IN SUBMISSION FORM & ACCORDION FAQ -->
-    <section class="section-pad" id="trade-in-submit-section" style="background: #0d120f;">
+    <section class="section-pad" id="trade-in-submit-section" style="background: var(--bg-surface);">
       <div class="container">
         <div class="grid-2" style="align-items: start;">
           <!-- Submission Form -->

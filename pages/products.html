@@ -74,7 +74,7 @@
           <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
           <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
           <a href="contact.html" class="nav-cta-btn">
-            <span>CUSTOM ORDER</span>
+            <span>CALL DISPATCH</span>
           </a>
         </div>
 
@@ -90,20 +90,19 @@
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+        <a href="index.html" class="brand-logo" aria-label="Vanguard Outpost Home">
+          <div class="brand-emblem" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
+          </div>
+          <div>
+            VANGUARD
+            <span class="brand-text-sub">OUTPOST &bull; CATALOG</span>
+          </div>
+        </a>
+        <button type="button" class="mobile-drawer-close" aria-label="Close Navigation">&times;</button>
+      </div>
     <div>
-      <div class="brand-logo">
-        <div class="brand-emblem">
-          <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
-        </div>
-        <div>
-          VANGUARD
-          <span class="brand-text-sub">FIELD NAVIGATION</span>
-        </div>
-      </div>
-      <div class="mobile-drawer-actions">
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
-        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
-      </div>
       <ul class="mobile-nav-list">
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
         <li><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
@@ -112,9 +111,13 @@
         <li><a href="trade-in.html" class="mobile-nav-link">Trade-In</a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
+      <div class="mobile-drawer-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+      </div>
     </div>
     <div>
-      <a href="contact.html" class="btn btn-primary btn-block">DISPATCH ENQUIRY</a>
+      <a href="contact.html" class="btn btn-primary btn-block">CALL DISPATCH</a>
       <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); margin-top: 16px; text-align: center;">VANGUARD PRODUCT VAULT</p>
     </div>
   </div>
@@ -126,9 +129,9 @@
   <main id="main-content">
 
     <!-- SECTION 1: CATALOG HERO & CATEGORY HUB -->
-    <section class="section-pad" id="catalog-hero" style="background: linear-gradient(180deg, #0a0d0c, #101613); padding-bottom: var(--space-10);">
+    <section class="section-pad" id="catalog-hero" style="padding-bottom: var(--space-10);">
       <div class="container">
-        <div class="section-header" style="margin-bottom: var(--space-8);">
+        <div class="section-header">
           <span class="section-tag">FIELD HARDWARE REPOSITORY</span>
           <h1 class="section-title">THE MASTER GEAR CATALOG</h1>
           <p class="section-subtitle">
@@ -162,7 +165,7 @@
     </section>
 
     <!-- SECTION 2: MASTER GEAR CATALOG GRID (3D Tilt Cards, Center-Aligned in ALL views) -->
-    <section class="section-pad" id="catalog-grid-section" style="background: #0d120f; padding-top: 0;">
+    <section class="section-pad" id="catalog-grid-section" style="background: var(--bg-surface); padding-top: 0;">
       <div class="container">
         <div class="grid-3" id="catalog-grid">
 
@@ -171,43 +174,39 @@
             <div class="card-img-wrap">
               <img src="../assets/images/product-optics-scope.jpg" alt="Apex Horizon 4-24x50 Riflescope" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 3v18M3 12h18"/></svg>
-            </div>
             <span class="card-badge">PRECISION OPTICS</span>
-            <h2 class="card-title">APEX HORIZON 4-24X50</h2>
-            <p class="card-desc">Zero-stop turrets, illuminated BDC reticle, and extra-low dispersion fluorite glass.</p>
+            <h3 class="card-title">APEX HORIZON 4-24X50 RIFLESCOPE</h3>
+            <p class="card-desc">Sub-MOA glass with zero-stop turrets and HD fluorite elements engineered for 1,000+ yard shots.</p>
+            
             <div class="card-specs-list">
               <span class="spec-chip">30mm Monotube</span>
+              <span class="spec-chip">Zero-Stop Turret</span>
               <span class="spec-chip">Argon Purged</span>
-              <span class="spec-chip">Zero-Stop</span>
             </div>
+
             <div class="card-footer">
               <div class="card-price">$1,299</div>
               <button type="button" class="btn btn-primary btn-block open-quick-look">INSPECT SPECS</button>
             </div>
           </article>
 
-          <!-- 2. APPAREL: TimberGhost Jacket -->
-          <article class="tilt-card product-card-item" data-category="apparel" data-category-label="TECHNICAL APPAREL" data-price="485" data-rating="4.9" data-tags="jacket shell camo waterproof apparel goretex" data-specs="28,000mm Hydrostatic|Silent Microsuede Face|Scent-Lock Carbon|Articulated Elbows" data-full-desc="Built for 8-hour sits in driving sleet and silent timber stalks. The TimberGhost 3-Layer All-Weather Shell bonds a micro-brushed stealth face with a microporous waterproof membrane that breaths under heavy uphill packouts.">
+          <!-- 2. APPAREL: Stealth Jacket -->
+          <article class="tilt-card product-card-item" data-category="apparel" data-category-label="STEALTH APPAREL" data-price="449" data-rating="4.8" data-tags="jacket jacket camo coat goretex waterproof windproof thermal" data-specs="GORE-TEX Pro 3L|Soundless Suede Shell|Primaloft Gold|Pit Zips|Harness Pass-Through" data-full-desc="Engineered for late-season tree stand vigils and alpine stalks. Quiet brushed suede face fabric eliminates noise while 3-layer GORE-TEX protects against freezing sleet.">
             <div class="card-img-wrap">
-              <img src="../assets/images/product-apparel-jacket.jpg" alt="Vanguard TimberGhost Camo Shell" loading="lazy">
+              <img src="../assets/images/product-apparel-jacket.jpg" alt="Timberline Stealth GORE-TEX Jacket" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg>
-            </div>
-            <span class="card-badge">TECHNICAL APPAREL</span>
-            <h2 class="card-title">TIMBERGHOST SHELL</h2>
-            <p class="card-desc">3-layer breathable membrane with silent brushed microsuede exterior and articulated sleeves.</p>
+            <span class="card-badge">STEALTH APPAREL</span>
+            <h3 class="card-title">TIMBERLINE STEALTH GORE-TEX JACKET</h3>
+            <p class="card-desc">Silent micro-weave face fabric with 100% windproof membrane and Primaloft Gold thermal lining.</p>
+            
             <div class="card-specs-list">
-              <span class="spec-chip">28k Waterproof</span>
               <span class="spec-chip">Sub-Zero Rated</span>
-              <span class="spec-chip">Scent-Lock</span>
+              <span class="spec-chip">Noise-Free Weave</span>
+              <span class="spec-chip">GORE-TEX Pro</span>
             </div>
+
             <div class="card-footer">
-              <div class="card-price">$485</div>
+              <div class="card-price">$449</div>
               <button type="button" class="btn btn-primary btn-block open-quick-look">INSPECT SPECS</button>
             </div>
           </article>
@@ -216,10 +215,6 @@
           <article class="tilt-card product-card-item" data-category="accessories" data-category-label="FIELD ACCESSORIES" data-price="1380" data-rating="5.0" data-tags="bow archery carbon arrow hunting compound" data-specs="346 FPS IBO|3.8 LBS Mass Weight|85% Let-off Dead-Stop|Synchronized Cams|Carbon Hollow Riser" data-full-desc="The Valkyrie Carbon 33 is the deadest-in-hand compound hunting bow ever built. CNC-machined titanium limb pockets with dual synchronized cams deliver laser-flat arrow trajectories at 346 feet per second.">
             <div class="card-img-wrap">
               <img src="../assets/images/product-archery-bow.jpg" alt="Valkyrie Carbon 33 Compound Bow" loading="lazy">
-            </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
             </div>
             <span class="card-badge">FIELD ACCESSORIES</span>
             <h2 class="card-title">VALKYRIE CARBON 33</h2>
@@ -240,10 +235,6 @@
             <div class="card-img-wrap">
               <img src="../assets/images/product-knife-survival.jpg" alt="Vanguard CPM-3V Field Fixed Blade Knife" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-            </div>
             <span class="card-badge">FIELD ACCESSORIES</span>
             <h2 class="card-title">TALON CPM-3V FIXED BLADE</h2>
             <p class="card-desc">Full-tang drop-point knife with cryo-tempered powder steel and oil-resistant micarta scales.</p>
@@ -262,10 +253,6 @@
           <article class="tilt-card product-card-item" data-category="apparel" data-category-label="TECHNICAL APPAREL" data-price="420" data-rating="4.9" data-tags="boots footwear mountain hunting waterproof vibram" data-specs="Vibram Curcuma Outsole|2.8mm Nubuck Leather|Gore-Tex Extended Comfort|Full Rubber Rand" data-full-desc="The Sawtooth Ridge Mountain Hunter boot provides the torsional rigidity required to carry 100+ lb meat packs down 40-degree talus slopes without rolling an ankle. 100% waterproof Gore-Tex membrane.">
             <div class="card-img-wrap">
               <img src="../assets/images/product-boots-mountain.jpg" alt="Sawtooth Ridge Mountain Hunter Boots" loading="lazy">
-            </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67z"/></svg>
             </div>
             <span class="card-badge">TECHNICAL APPAREL</span>
             <h2 class="card-title">SAWTOOTH MOUNTAIN BOOTS</h2>
@@ -286,10 +273,6 @@
             <div class="card-img-wrap">
               <img src="../assets/images/product-thermal-binos.jpg" alt="GhostRay Pro 640 Thermal Rangefinding Binoculars" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>
-            </div>
             <span class="card-badge">PRECISION OPTICS</span>
             <h2 class="card-title">GHOSTRAY PRO 640 THERMAL</h2>
             <p class="card-desc">640x512 thermal sensor with integrated 1,200-yard laser rangefinder and onboard video telemetry.</p>
@@ -308,10 +291,6 @@
           <article class="tilt-card product-card-item" data-category="accessories" data-category-label="FIELD ACCESSORIES" data-price="620" data-rating="4.9" data-tags="pack backpack hunting hauler frame meat shelf" data-specs="105L Cargo Volume|Cordura 1000D Ballistic|External Carbon Frame|140-lb Load Rating|Rifle Boot" data-full-desc="Designed for multi-day wilderness expeditions where self-extraction of game meat is necessary. The Kodiak 6500 separates the bag from the frame in seconds, creating an expandable meat-shelf cargo bay.">
             <div class="card-img-wrap">
               <img src="../assets/images/product-pack-expedition.jpg" alt="Kodiak 6500 Load-Hauler Pack" loading="lazy">
-            </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
             </div>
             <span class="card-badge">FIELD ACCESSORIES</span>
             <h2 class="card-title">KODIAK 6500 LOAD HAULER</h2>
@@ -332,10 +311,6 @@
             <div class="card-img-wrap">
               <img src="../assets/images/product-camo-pants.jpg" alt="RidgeLine Alpine Attack Camo Pants" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg>
-            </div>
             <span class="card-badge">TECHNICAL APPAREL</span>
             <h2 class="card-title">RIDGELINE ATTACK PANTS</h2>
             <p class="card-desc">4-way stretch technical field trousers with removable low-profile stalking knee pads.</p>
@@ -354,10 +329,6 @@
           <article class="tilt-card product-card-item" data-category="optics" data-category-label="PRECISION OPTICS" data-price="650" data-rating="4.9" data-tags="rangefinder laser optic lrf ballistic angle" data-specs="3000Y Reflective Range|HyperScan 0.1s Pulse|Applied Ballistics Solver|OLED Display" data-full-desc="Accurate ranging out to 3,000 yards with onboard Applied Ballistics solver that syncs via Bluetooth to Kestrel weather meters for instant holdover readouts.">
             <div class="card-img-wrap">
               <img src="../assets/images/product-rangefinder.jpg" alt="Vanguard Vector 3000 Ballistic Laser Rangefinder" loading="lazy">
-            </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7v10M7 12h10"/></svg>
             </div>
             <span class="card-badge">PRECISION OPTICS</span>
             <h2 class="card-title">VECTOR 3000 BALLISTIC LRF</h2>
@@ -378,10 +349,6 @@
             <div class="card-img-wrap">
               <img src="../assets/images/product-gloves-tactical.jpg" alt="StealthStalker Insulated Trigger Gloves" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-            </div>
             <span class="card-badge">TECHNICAL APPAREL</span>
             <h2 class="card-title">STEALTHSTALKER GLOVES</h2>
             <p class="card-desc">Windproof insulated shooting gloves with fold-back magnetic trigger finger and goatskin palm.</p>
@@ -401,10 +368,6 @@
             <div class="card-img-wrap">
               <img src="../assets/images/product-tent-backcountry.jpg" alt="Apex Ridge Ultralight 4-Season Bivy Tent" loading="lazy">
             </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2L7 10l-6 8h22L14 6z"/></svg>
-            </div>
             <span class="card-badge">FIELD ACCESSORIES</span>
             <h2 class="card-title">APEX RIDGE 4-SEASON BIVY</h2>
             <p class="card-desc">Freestanding 4-season alpine shelter weighing just 3.2 lbs, proof-tested in sub-zero whiteouts.</p>
@@ -423,10 +386,6 @@
           <article class="tilt-card product-card-item" data-category="optics" data-category-label="PRECISION OPTICS" data-price="890" data-rating="4.9" data-tags="binoculars glass optics binos fluorite ed" data-specs="10x42 Roof Prism|Magnesium Armor Body|Dielectric Prism Coating|Nitrogen Purged" data-full-desc="The scout's primary workhorse. 10x magnification with 42mm fluorite objective lenses providing razor-sharp edge-to-edge resolution in low-light morning timber.">
             <div class="card-img-wrap">
               <img src="../assets/images/product-optics-scope.jpg" alt="Vanguard Timberline 10x42 ED Binoculars" loading="lazy">
-            </div>
-            <div class="card-icon-wrap" aria-hidden="true">
-              <div class="reticle-accent"></div>
-              <svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="16" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
             </div>
             <span class="card-badge">PRECISION OPTICS</span>
             <h2 class="card-title">TIMBERLINE 10X42 ED BINOS</h2>
@@ -471,32 +430,32 @@
               <tr style="border-bottom: 1px solid var(--border-subtle);">
                 <td style="padding: 14px 20px; font-weight: 700; text-align: left; font-family: var(--font-mono);">Light Transmission Rate</td>
                 <td style="padding: 14px 20px; color: var(--text-muted);">88% – 91%</td>
-                <td style="padding: 14px 20px; color: #27ae60; font-weight: 700;">99.4% Verified</td>
+                <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">99.4% Verified</td>
                 <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">Zero Optical (Heat Sensor)</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255, 255, 255, 0.02);">
                 <td style="padding: 14px 20px; font-weight: 700; text-align: left; font-family: var(--font-mono);">Chromatic Fringe Elimination</td>
                 <td style="padding: 14px 20px; color: var(--text-muted);">Moderate at Max Zoom</td>
-                <td style="padding: 14px 20px; color: #27ae60; font-weight: 700;">Complete (Abbe #95.2)</td>
+                <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">Complete (Abbe #95.2)</td>
                 <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">N/A (Digital Palette)</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-subtle);">
                 <td style="padding: 14px 20px; font-weight: 700; text-align: left; font-family: var(--font-mono);">Detection Through Heavy Fog</td>
                 <td style="padding: 14px 20px; color: #e74c3c;">Zero Penetration</td>
                 <td style="padding: 14px 20px; color: var(--text-muted);">Surface Contrast Only</td>
-                <td style="padding: 14px 20px; color: #27ae60; font-weight: 700;">100% Thermal Signature</td>
+                <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">100% Thermal Signature</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255, 255, 255, 0.02);">
                 <td style="padding: 14px 20px; font-weight: 700; text-align: left; font-family: var(--font-mono);">Recoil Shock Threshold</td>
                 <td style="padding: 14px 20px; color: var(--text-muted);">600 Gs (.30-06)</td>
-                <td style="padding: 14px 20px; color: #27ae60; font-weight: 700;">1,200 Gs (.338 Lapua)</td>
-                <td style="padding: 14px 20px; color: #27ae60; font-weight: 700;">1,000 Gs Shock Rated</td>
+                <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">1,200 Gs (.338 Lapua)</td>
+                <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">1,000 Gs Shock Rated</td>
               </tr>
               <tr>
                 <td style="padding: 14px 20px; font-weight: 700; text-align: left; font-family: var(--font-mono);">Warranty Coverage</td>
                 <td style="padding: 14px 20px; color: var(--text-muted);">5 Years Limited</td>
-                <td style="padding: 14px 20px; color: #27ae60; font-weight: 700;">Unconditional Lifetime</td>
-                <td style="padding: 14px 20px; color: #27ae60; font-weight: 700;">5-Year Sensor Guarantee</td>
+                <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">Unconditional Lifetime</td>
+                <td style="padding: 14px 20px; color: var(--color-blaze); font-weight: 700;">5-Year Sensor Guarantee</td>
               </tr>
             </tbody>
           </table>

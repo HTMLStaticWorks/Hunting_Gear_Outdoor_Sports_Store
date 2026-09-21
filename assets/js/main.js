@@ -61,8 +61,11 @@
 
   function updateThemeIcons(theme) {
     const themeBtns = document.querySelectorAll('.theme-toggle-btn');
+    const moonSvg = `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" style="display: block;"><path d="M12.3 2a10 10 0 0 0 9.7 11.6 10 10 0 1 1-9.7-11.6z"/></svg>`;
+    const sunSvg = `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" style="display: block;"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>`;
+
     themeBtns.forEach(btn => {
-      btn.innerHTML = theme === 'light' ? '🌙' : '☀️';
+      btn.innerHTML = theme === 'light' ? moonSvg : sunSvg;
       btn.setAttribute('aria-label', theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode');
     });
   }
@@ -123,6 +126,10 @@
       if (backdrop) {
         backdrop.addEventListener('click', closeMenu);
       }
+
+      // Close menu when clicking drawer close button
+      const drawerCloseBtns = drawer.querySelectorAll('.mobile-drawer-close');
+      drawerCloseBtns.forEach(btn => btn.addEventListener('click', closeMenu));
 
       // Close menu on pressing Escape key
       window.addEventListener('keydown', (e) => {
@@ -497,16 +504,16 @@
 
         if (total < 28) {
           weightStatusEl.textContent = 'RAPID ALPINE / ULTRALIGHT';
-          weightStatusEl.style.color = '#27ae60';
-          weightProgressBar.style.background = 'linear-gradient(90deg, #27ae60, #2ecc71)';
+          weightStatusEl.style.color = '#d8521a';
+          weightProgressBar.style.background = 'linear-gradient(90deg, #d8521a, #ff7e47)';
         } else if (total <= 48) {
           weightStatusEl.textContent = 'BALANCED 5-DAY BACKCOUNTRY';
-          weightStatusEl.style.color = '#e05d26';
-          weightProgressBar.style.background = 'linear-gradient(90deg, #4d5d3b, #e05d26)';
+          weightStatusEl.style.color = '#d8521a';
+          weightProgressBar.style.background = 'linear-gradient(90deg, #d8521a, #ff6b35)';
         } else {
           weightStatusEl.textContent = 'HEAVY EXPEDITION LOADOUT';
-          weightStatusEl.style.color = '#e74c3c';
-          weightProgressBar.style.background = 'linear-gradient(90deg, #e05d26, #e74c3c)';
+          weightStatusEl.style.color = '#c0392b';
+          weightProgressBar.style.background = 'linear-gradient(90deg, #d8521a, #c0392b)';
         }
       }
     };
@@ -588,7 +595,7 @@
       successModal.className = 'modal-overlay is-visible';
       successModal.innerHTML = `
         <div class="modal-box" style="max-width: 480px; text-align: center;">
-          <div class="card-icon-wrap" style="color: #27ae60; border-color: #27ae60; margin-bottom: 20px;">
+          <div class="card-icon-wrap" style="color: var(--color-blaze); border-color: var(--color-blaze); margin-bottom: 20px;">
             <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
           </div>
           <h3 id="success-title-text" style="font-family: var(--font-display); font-size: 1.8rem; color: var(--text-main); margin-bottom: 12px;">${title}</h3>
