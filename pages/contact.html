@@ -87,8 +87,10 @@
         </ul>
 
         <div class="navbar-action-group">
-          <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
-          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle RTL layout">RTL</button>
           <a href="#contact-form-section" class="nav-cta-btn">
             <span>CALL DISPATCH</span>
           </a>
@@ -128,8 +130,10 @@
         <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
       </ul>
       <div class="mobile-drawer-actions">
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
-        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout">LTR</button>
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL Layout" title="Toggle RTL layout">RTL</button>
       </div>
     </div>
     <div>
@@ -145,7 +149,7 @@
   <main id="main-content">
 
     <!-- SECTION 1: OUTPOST HEADQUARTERS HERO -->
-    <section class="section-pad" id="contact-hero" style="position: relative; overflow: hidden;">
+    <section class="section-pad" id="contact-hero" style="position: relative; overflow: hidden; padding: 48px 0 32px;">
       <div class="hero-1-bg" style="background-image: url('../assets/images/contact-outpost-store.jpg');"></div>
       <div class="hero-1-overlay"></div>
       <div class="topography-canvas-container" aria-hidden="true">
@@ -153,27 +157,27 @@
       </div>
 
       <div class="container" style="position: relative; z-index: 2;">
-        <div class="section-header">
-          <div class="hero-badge-group" style="justify-content: center;">
+        <div class="section-header" style="margin-bottom: 22px;">
+          <div class="hero-badge-group" style="justify-content: center; margin-bottom: 10px;">
             <span class="section-tag">BOZEMAN, MONTANA HEADQUARTERS</span>
             <span class="card-badge">PRO-STAFF CONSULTATION READY</span>
           </div>
-          <h1 class="section-title">CONNECT WITH OUTPOST COMMAND</h1>
-          <p class="section-subtitle">
+          <h1 class="section-title" style="margin-bottom: 8px;">CONNECT WITH OUTPOST COMMAND</h1>
+          <p class="section-subtitle" style="margin-bottom: 0;">
             Whether you need custom rifle zeroing in our subterranean tunnel, broadhead flight tuning, or outfitter fleet logistics — our guides are standing by.
           </p>
         </div>
 
         <div class="hero-telemetry-grid" style="max-width: 920px; margin: 0 auto; border-color: var(--border-subtle);">
-          <div class="telem-item" style="text-align: center;">
+          <div class="telem-item" style="text-align: center; padding: 12px 16px;">
             <div class="telem-label">PHONE DISPATCH</div>
             <div class="telem-value"><a href="tel:+18008264868" style="color: var(--color-blaze);">1-800-826-HUNT</a></div>
           </div>
-          <div class="telem-item" style="text-align: center;">
+          <div class="telem-item" style="text-align: center; padding: 12px 16px;">
             <div class="telem-label">RADIO FREQUENCY</div>
             <div class="telem-value">155.475 MHz VHF</div>
           </div>
-          <div class="telem-item" style="text-align: center;">
+          <div class="telem-item" style="text-align: center; padding: 12px 16px;">
             <div class="telem-label">STORE &amp; RANGE HOURS</div>
             <div class="telem-value">MON–SAT: 06:00 – 20:00 MT</div>
           </div>
@@ -182,47 +186,47 @@
     </section>
 
     <!-- SECTION 2: OFFICIAL OUTFITTER ENQUIRY FORM (With Client-Side Validation) -->
-    <section class="section-pad" id="contact-form-section" style="background: #0d120f;">
+    <section class="section-pad" id="contact-form-section" style="background: #0d120f; padding: 44px 0;">
       <div class="container">
-        <div class="grid-2" style="align-items: start;">
+        <div class="grid-2" style="align-items: start; gap: 24px;">
           <!-- Form Box -->
-          <div class="tool-box" style="border: 1.5px solid var(--border-accent);">
-            <span class="section-tag">SECURE TRANSMISSION</span>
-            <h2 style="font-family: var(--font-display); font-size: 2rem; text-transform: uppercase; color: var(--text-main); margin-bottom: 8px;">
+          <div class="tool-box" style="border: 1.5px solid var(--border-accent); padding: 24px 22px;">
+            <span class="section-tag" style="margin-bottom: 4px;">SECURE TRANSMISSION</span>
+            <h2 style="font-family: var(--font-display); font-size: 1.8rem; text-transform: uppercase; color: var(--text-main); margin: 4px 0 6px;">
               TRANSMIT FIELD DISPATCH
             </h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 24px;">
-              Fill out your field inquiry below. Compatible with Formspree and Netlify-Forms handlers.
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+              Fill out your field inquiry below. Regional pro-staff confirm within 4 business hours.
             </p>
 
             <form id="contact-enquiry-form" data-validate="true" data-success-title="DISPATCH RECEIVED BY BOZEMAN HQ" data-success-msg="Your message has been assigned to a regional pro-staff specialist. Expect radio or email confirmation within 4 business hours.">
               <!-- Name -->
-              <div class="form-group" style="margin-bottom: 16px;">
-                <label for="contact-name" class="form-label">FULL NAME *</label>
-                <input type="text" id="contact-name" name="name" class="form-control" placeholder="Hunter or Outfitter Name" required>
+              <div class="form-group" style="margin-bottom: 12px;">
+                <label for="contact-name" class="form-label" style="font-size: 0.78rem;">FULL NAME *</label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="Hunter or Outfitter Name" required style="padding: 10px 14px;">
                 <span class="error-msg" data-error-for="contact-name">Please provide your name for outfitter records.</span>
               </div>
 
               <!-- Email & Phone Grid -->
-              <div class="calc-grid" style="margin-bottom: 16px;">
+              <div class="calc-grid" style="margin-bottom: 12px; gap: 12px;">
                 <div class="form-group">
-                  <label for="contact-email" class="form-label">EMAIL ADDRESS *</label>
-                  <input type="email" id="contact-email" name="email" class="form-control" placeholder="hunter@domain.com" required>
+                  <label for="contact-email" class="form-label" style="font-size: 0.78rem;">EMAIL ADDRESS *</label>
+                  <input type="email" id="contact-email" name="email" class="form-control" placeholder="hunter@domain.com" required style="padding: 10px 14px;">
                   <span class="error-msg" data-error-for="contact-email">Valid email is required.</span>
                 </div>
 
                 <div class="form-group">
-                  <label for="contact-phone" class="form-label">PHONE / RADIO *</label>
-                  <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="(406) 555-0182" required>
+                  <label for="contact-phone" class="form-label" style="font-size: 0.78rem;">PHONE / RADIO *</label>
+                  <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="(406) 555-0182" required style="padding: 10px 14px;">
                   <span class="error-msg" data-error-for="contact-phone">Phone number is required.</span>
                 </div>
               </div>
 
               <!-- Inquiry Type & Gear Category -->
-              <div class="calc-grid" style="margin-bottom: 16px;">
+              <div class="calc-grid" style="margin-bottom: 12px; gap: 12px;">
                 <div class="form-group">
-                  <label for="contact-type" class="form-label">INQUIRY DISPATCH TYPE</label>
-                  <select id="contact-type" name="inquiry_type" class="form-control">
+                  <label for="contact-type" class="form-label" style="font-size: 0.78rem;">INQUIRY DISPATCH TYPE</label>
+                  <select id="contact-type" name="inquiry_type" class="form-control" style="padding: 10px 14px;">
                     <option value="gear-consultation">Custom Gear Consultation</option>
                     <option value="outfitter-fleet">Guide &amp; Outfitter Wholesale</option>
                     <option value="trade-in-inquiry">Trade-In &amp; Appraisal Assistance</option>
@@ -232,8 +236,8 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="contact-urgency" class="form-label">SEASON URGENCY</label>
-                  <select id="contact-urgency" name="urgency" class="form-control">
+                  <label for="contact-urgency" class="form-label" style="font-size: 0.78rem;">SEASON URGENCY</label>
+                  <select id="contact-urgency" name="urgency" class="form-control" style="padding: 10px 14px;">
                     <option value="standard">Standard (Within 24 Hours)</option>
                     <option value="urgent">Urgent: Tag Opens Within 7 Days</option>
                     <option value="expedition">Active Field Expedition (Priority)</option>
@@ -242,113 +246,112 @@
               </div>
 
               <!-- Message -->
-              <div class="form-group" style="margin-bottom: 24px;">
-                <label for="contact-message" class="form-label">FIELD DISPATCH DETAILS *</label>
-                <textarea id="contact-message" name="message" class="form-control" rows="4" placeholder="Detail your hunting unit, target species, optics requirements, or fitting questions..." required></textarea>
+              <div class="form-group" style="margin-bottom: 16px;">
+                <label for="contact-message" class="form-label" style="font-size: 0.78rem;">FIELD DISPATCH DETAILS *</label>
+                <textarea id="contact-message" name="message" class="form-control" rows="3" placeholder="Detail your hunting unit, target species, optics requirements, or fitting questions..." required style="padding: 10px 14px;"></textarea>
                 <span class="error-msg" data-error-for="contact-message">Please provide details regarding your inquiry.</span>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block">
+              <button type="submit" class="btn btn-primary btn-block" style="padding: 12px 20px;">
                 <span>TRANSMIT DISPATCH TO PRO-STAFF</span>
                 <span class="btn-icon-right" aria-hidden="true">→</span>
               </button>
             </form>
           </div>
 
-          <!-- Outpost Facility Info -->
-          <div style="display: flex; flex-direction: column; gap: 20px;">
-            <div class="tilt-card" data-max-tilt="10" style="padding: 28px;">
-              <div class="card-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <!-- Outpost Facility & Direct Lines Side Column -->
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <!-- Card 1: Flagship Showroom & Facility Info -->
+            <div class="tilt-card" data-max-tilt="8" style="padding: 18px 20px; height: auto !important;">
+              <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 8px;">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
               </div>
-              <span class="card-badge">FLAGSHIP OUTPOST LODGE</span>
-              <h3 class="card-title">BOZEMAN SHOWROOM &amp; RANGE</h3>
-              <p class="card-desc">
-                4800 Timberline Ridge Pass<br>
-                Bozeman, MT 59715<br>
-                United States
+              <span class="card-badge" style="margin-bottom: 4px;">FLAGSHIP OUTPOST LODGE</span>
+              <h3 class="card-title" style="font-size: 1.35rem; margin: 4px 0 4px;">BOZEMAN SHOWROOM &amp; RANGE</h3>
+              <p class="card-desc" style="margin-bottom: 8px; font-size: 0.88rem; line-height: 1.4;">
+                4800 Timberline Ridge Pass, Bozeman, MT 59715 &bull; USA
               </p>
-              <div class="card-specs-list">
-                <span class="spec-chip">50Y Indoor Archery</span>
-                <span class="spec-chip">100Y Optical Tunnel</span>
-                <span class="spec-chip">Boot Calibration Bay</span>
+              <div class="card-specs-list" style="margin-top: 0; justify-content: center; gap: 6px;">
+                <span class="spec-chip" style="font-size: 0.72rem; padding: 3px 8px;">50Y Indoor Archery</span>
+                <span class="spec-chip" style="font-size: 0.72rem; padding: 3px 8px;">100Y Optical Tunnel</span>
+                <span class="spec-chip" style="font-size: 0.72rem; padding: 3px 8px;">Boot Calibration Bay</span>
               </div>
             </div>
 
-            <div class="tilt-card" data-max-tilt="10" style="padding: 28px;">
-              <div class="card-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7v5l3 3"/></svg>
+            <!-- Card 2: Command Dispatch Direct Lines & Hours -->
+            <div class="tool-box" style="padding: 18px 20px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+                <span class="section-tag" style="margin: 0;">DIRECT LINES &amp; HOURS</span>
+                <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--color-khaki);">VHF: 155.475 MHz</span>
               </div>
-              <span class="card-badge">HOURS OF OPERATION</span>
-          <!-- Contact Quick Info Side Column -->
-          <div style="display: flex; flex-direction: column; gap: var(--space-6);">
-            <!-- Direct Dispatch Card -->
-            <div class="tool-box">
-              <span class="section-tag">DIRECT LINES</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--text-main); margin: var(--space-2) 0 var(--space-4);">COMMAND DISPATCH DIRECTORY</h3>
-              
-              <ul style="display: flex; flex-direction: column; gap: var(--space-4); font-size: 0.95rem;">
-                <li style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle);">
+
+              <ul style="display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; margin-bottom: 12px;">
+                <li style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 4px; border-bottom: 1px solid var(--border-subtle);">
                   <span style="color: var(--text-muted);">Main Outpost Desk:</span>
-                  <strong style="color: var(--color-blaze);">(406) 826-4868</strong>
+                  <a href="tel:+14068264868" style="color: var(--color-blaze); font-weight: 700; text-decoration: none;">(406) 826-4868</a>
                 </li>
-                <li style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle);">
+                <li style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 4px; border-bottom: 1px solid var(--border-subtle);">
                   <span style="color: var(--text-muted);">Archery Lab Direct:</span>
                   <strong style="color: var(--text-main);">(406) 826-4870</strong>
                 </li>
-                <li style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle);">
+                <li style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 4px; border-bottom: 1px solid var(--border-subtle);">
                   <span style="color: var(--text-muted);">Optics Bench Direct:</span>
                   <strong style="color: var(--text-main);">(406) 826-4872</strong>
                 </li>
-                <li style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle);">
-                  <span style="color: var(--text-muted);">VHF Radio Frequency:</span>
-                  <strong style="color: var(--color-khaki); font-family: var(--font-mono);">155.475 MHz</strong>
-                </li>
               </ul>
-            </div>
 
-            <!-- Operating Hours Card -->
-            <div class="tool-box">
-              <span class="section-tag">BOZEMAN SHOWROOM HOURS</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--text-main); margin: var(--space-2) 0 var(--space-4);">RANGE &amp; RETAIL TIMINGS</h3>
-              
-              <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 0.92rem; color: var(--text-muted);">
-                <li style="display: flex; justify-content: space-between;">
-                  <span>Monday – Friday:</span>
+              <!-- Range & Retail Hours -->
+              <div style="background: var(--bg-surface-elevated); padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 2px;">
+                  <span style="color: var(--text-muted);">Mon – Sat:</span>
                   <span style="color: var(--text-main); font-weight: 600;">06:00 AM – 08:00 PM MT</span>
-                </li>
-                <li style="display: flex; justify-content: space-between;">
-                  <span>Saturday:</span>
-                  <span style="color: var(--text-main); font-weight: 600;">06:00 AM – 08:00 PM MT</span>
-                </li>
-                <li style="display: flex; justify-content: space-between;">
-                  <span>Sunday:</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem;">
+                  <span style="color: var(--text-muted);">Sunday:</span>
                   <span style="color: var(--color-blaze); font-weight: 600;">08:00 AM – 05:00 PM MT</span>
-                </li>
-              </ul>
-              <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed var(--border-subtle); font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-faint);">
-                * Indoor 100-yard subterranean zeroing tunnel operates during all retail hours. Appointments recommended for broadhead flight tuning.
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Center-Aligned Social Media & Field Frequency Channels -->
+        <div class="contact-social-strip" style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px;">
+          <div style="font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700; color: var(--color-blaze); letter-spacing: 0.08em; text-transform: uppercase;">
+            CONNECT VIA OFFICIAL EXPEDITION CHANNELS
+          </div>
+          <div class="contact-social-icons" style="display: flex; align-items: center; justify-content: center; gap: 12px;">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Vanguard Outpost on Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Vanguard Outpost on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Watch field videos on YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Vanguard Outpost on X" title="X (Twitter)">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 3: INTERACTIVE FLAGSHIP MAP & FACILITY AMENITIES -->
-    <section class="section-pad" id="contact-map-section" style="background: var(--bg-base); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <section class="section-pad" id="contact-map-section" style="background: var(--bg-base); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 44px 0;">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" style="margin-bottom: 20px;">
           <span class="section-tag">BOZEMAN FACILITY</span>
           <h2 class="section-title">THE OUTPOST COMPOUND &amp; TACTICAL MAP</h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" style="margin-bottom: 0;">
             Located just off Interstate 90 at the base of the Bridger Mountain Range. Full drive-in access for trailer hunting rigs and guide trucks.
           </p>
         </div>
 
         <div class="tool-box" style="padding: 0; overflow: hidden; border: 1.5px solid var(--border-subtle);">
           <!-- Tactical Google Map Placeholder with Custom Coordinate Canvas -->
-          <div style="position: relative; width: 100%; height: 420px; background: var(--bg-surface); overflow: hidden; display: flex; align-items: center; justify-content: center;">
+          <div style="position: relative; width: 100%; height: 300px; background: var(--bg-surface); overflow: hidden; display: flex; align-items: center; justify-content: center;">
             <!-- Interactive Topographic Background -->
             <div class="topography-canvas-container" aria-hidden="true">
               <canvas class="topography-canvas"></canvas>
@@ -358,12 +361,12 @@
             <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(203, 187, 157, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(203, 187, 157, 0.08) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none;"></div>
 
             <!-- Pin Beacon -->
-            <div style="position: relative; z-index: 10; text-align: center; background: var(--bg-card); border: 1.5px solid var(--color-blaze); padding: 20px 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 92%; max-width: 440px; box-sizing: border-box; margin: 0 auto;">
-              <div style="width: 14px; height: 14px; background: var(--color-blaze); border-radius: 50%; box-shadow: 0 0 16px var(--color-blaze); margin: 0 auto 12px; animation: pulse-green 1.8s infinite ease-in-out;"></div>
-              <span class="card-badge" style="background: var(--color-blaze); color: #fff;">VANGUARD COMPOUND PIN</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--text-main); margin-bottom: 4px;">4800 TIMBERLINE RIDGE PASS</h3>
-              <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-khaki); margin-bottom: 14px; word-break: break-word;">LAT: 45.6770° N | LON: 111.0429° W | EL: 4,820 FT</p>
-              <a href="https://maps.google.com/?q=Bozeman+Montana" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 8px 18px; font-size: 0.88rem;">
+            <div style="position: relative; z-index: 10; text-align: center; background: var(--bg-card); border: 1.5px solid var(--color-blaze); padding: 16px 14px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 92%; max-width: 400px; box-sizing: border-box; margin: 0 auto;">
+              <div style="width: 10px; height: 10px; background: var(--color-blaze); border-radius: 50%; box-shadow: 0 0 14px var(--color-blaze); margin: 0 auto 8px; animation: pulse-green 1.8s infinite ease-in-out;"></div>
+              <span class="card-badge" style="background: var(--color-blaze); color: #fff; margin-bottom: 4px; font-size: 0.7rem; padding: 2px 8px;">VANGUARD COMPOUND PIN</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--text-main); margin-bottom: 2px;">4800 TIMBERLINE RIDGE PASS</h3>
+              <p style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--color-khaki); margin-bottom: 10px; word-break: break-word;">LAT: 45.6770° N | LON: 111.0429° W | EL: 4,820 FT</p>
+              <a href="https://maps.google.com/?q=Bozeman+Montana" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.8rem;">
                 <span>OPEN IN GOOGLE MAPS</span>
                 <span class="btn-icon-right" aria-hidden="true">↗</span>
               </a>
@@ -371,23 +374,23 @@
           </div>
 
           <!-- Compound Amenity Bar -->
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--border-subtle);">
-            <div style="background: var(--bg-surface); padding: 20px; text-align: center;">
-              <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-blaze); font-weight: 700;">AMENITY 01</div>
-              <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--text-main); margin-top: 4px;">100-YARD OPTICAL TUNNEL</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">Climate-controlled zeroing chamber with digital chronograph.</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--border-subtle);">
+            <div style="background: var(--bg-surface); padding: 14px; text-align: center;">
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-blaze); font-weight: 700;">AMENITY 01</div>
+              <div style="font-family: var(--font-display); font-size: 1.05rem; color: var(--text-main); margin-top: 2px;">100-YARD OPTICAL TUNNEL</div>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Climate-controlled zeroing chamber with chronograph.</p>
             </div>
 
-            <div style="background: var(--bg-surface); padding: 20px; text-align: center;">
-              <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-blaze); font-weight: 700;">AMENITY 02</div>
-              <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--text-main); margin-top: 4px;">50-YARD ARCHERY LANES</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">High-speed paper tuning and 3D foam target lanes.</p>
+            <div style="background: var(--bg-surface); padding: 14px; text-align: center;">
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-blaze); font-weight: 700;">AMENITY 02</div>
+              <div style="font-family: var(--font-display); font-size: 1.05rem; color: var(--text-main); margin-top: 2px;">50-YARD ARCHERY LANES</div>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">High-speed paper tuning and 3D foam target lanes.</p>
             </div>
 
-            <div style="background: var(--bg-surface); padding: 20px; text-align: center;">
-              <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-blaze); font-weight: 700;">AMENITY 03</div>
-              <div style="font-family: var(--font-display); font-size: 1.15rem; color: var(--text-main); margin-top: 4px;">CUSTOM BOOT FITTING RAMP</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">30-degree rock incline to eliminate heel slippage and hotspots.</p>
+            <div style="background: var(--bg-surface); padding: 14px; text-align: center;">
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-blaze); font-weight: 700;">AMENITY 03</div>
+              <div style="font-family: var(--font-display); font-size: 1.05rem; color: var(--text-main); margin-top: 2px;">CUSTOM BOOT FITTING RAMP</div>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">30-degree rock incline to eliminate heel slippage.</p>
             </div>
           </div>
         </div>
@@ -395,82 +398,82 @@
     </section>
 
     <!-- SECTION 4: REGIONAL PRO-STAFF DIRECTORY & SOCIAL NETWORKS -->
-    <section class="section-pad" id="regional-pro-staff" style="background: #0d120f;">
+    <section class="section-pad" id="regional-pro-staff" style="background: #0d120f; padding: 44px 0 48px;">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" style="margin-bottom: 22px;">
           <span class="section-tag">EXPEDITION NETWORK</span>
           <h2 class="section-title">REGIONAL PRO-STAFF DISPATCH DIRECTORY</h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" style="margin-bottom: 0;">
             Direct communication channels to our master outfitters stationed across primary hunting sectors.
           </p>
         </div>
 
-        <div class="grid-4">
+        <div class="grid-4" style="gap: 14px;">
           <!-- Hub 1 -->
-          <article class="tilt-card" data-max-tilt="16">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3L2 21h20L12 3zm0 4.2l6.5 11.8h-13L12 7.2zM12 11l2.5 4.5h-5L12 11z"/></svg>
+          <article class="tilt-card" data-max-tilt="12" style="padding: 16px 14px; height: auto !important;">
+            <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 6px;">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3L2 21h20L12 3zm0 4.2l6.5 11.8h-13L12 7.2zM12 11l2.5 4.5h-5L12 11z"/></svg>
             </div>
-            <span class="card-badge">SECTOR 01</span>
-            <h3 class="card-title">NORTHERN ROCKIES</h3>
-            <p class="card-desc">Big Timber, MT &bull; Elk, Mule Deer, Bighorn Sheep scouting logistics.</p>
-            <div class="card-specs-list">
-              <span class="spec-chip">VHF: 155.475</span>
-              <span class="spec-chip">Lead: Wyatt Keller</span>
+            <span class="card-badge" style="font-size: 0.7rem; padding: 2px 6px;">SECTOR 01</span>
+            <h3 class="card-title" style="font-size: 1.2rem; margin: 4px 0 2px;">NORTHERN ROCKIES</h3>
+            <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 8px;">Big Timber, MT &bull; Elk, Mule Deer, Sheep logistics.</p>
+            <div class="card-specs-list" style="margin: 0 0 10px; gap: 4px;">
+              <span class="spec-chip" style="font-size: 0.7rem; padding: 2px 6px;">VHF: 155.475</span>
+              <span class="spec-chip" style="font-size: 0.7rem; padding: 2px 6px;">Wyatt Keller</span>
             </div>
-            <div class="card-footer">
-              <a href="mailto:rockies@vanguardoutpost.com" class="btn btn-outline btn-block">EMAIL SECTOR</a>
+            <div class="card-footer" style="width: 100%; margin-top: auto; padding-top: 0; border-top: none;">
+              <a href="mailto:rockies@vanguardoutpost.com" class="btn btn-outline btn-block" style="padding: 6px 10px; font-size: 0.8rem;">EMAIL SECTOR</a>
             </div>
           </article>
 
           <!-- Hub 2 -->
-          <article class="tilt-card" data-max-tilt="16">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2L7 10l-6 8h22L14 6z"/></svg>
+          <article class="tilt-card" data-max-tilt="12" style="padding: 16px 14px; height: auto !important;">
+            <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 6px;">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2L7 10l-6 8h22L14 6z"/></svg>
             </div>
-            <span class="card-badge">SECTOR 02</span>
-            <h3 class="card-title">ALASKA RANGE</h3>
-            <p class="card-desc">Palmer, AK &bull; Dall Sheep, Brown Bear, and Brooks Range float logistics.</p>
-            <div class="card-specs-list">
-              <span class="spec-chip">SAT-COM: #9842</span>
-              <span class="spec-chip">Lead: Colt MacAllister</span>
+            <span class="card-badge" style="font-size: 0.7rem; padding: 2px 6px;">SECTOR 02</span>
+            <h3 class="card-title" style="font-size: 1.2rem; margin: 4px 0 2px;">ALASKA RANGE</h3>
+            <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 8px;">Palmer, AK &bull; Dall Sheep, Bear, Brooks float.</p>
+            <div class="card-specs-list" style="margin: 0 0 10px; gap: 4px;">
+              <span class="spec-chip" style="font-size: 0.7rem; padding: 2px 6px;">SAT-COM: #9842</span>
+              <span class="spec-chip" style="font-size: 0.7rem; padding: 2px 6px;">Colt MacAllister</span>
             </div>
-            <div class="card-footer">
-              <a href="mailto:alaska@vanguardoutpost.com" class="btn btn-outline btn-block">EMAIL SECTOR</a>
+            <div class="card-footer" style="width: 100%; margin-top: auto; padding-top: 0; border-top: none;">
+              <a href="mailto:alaska@vanguardoutpost.com" class="btn btn-outline btn-block" style="padding: 6px 10px; font-size: 0.8rem;">EMAIL SECTOR</a>
             </div>
           </article>
 
           <!-- Hub 3 -->
-          <article class="tilt-card" data-max-tilt="16">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          <article class="tilt-card" data-max-tilt="12" style="padding: 16px 14px; height: auto !important;">
+            <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 6px;">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
             </div>
-            <span class="card-badge">SECTOR 03</span>
-            <h3 class="card-title">MIDWEST TIMBERLANDS</h3>
-            <p class="card-desc">La Crosse, WI &bull; Mature Whitetail patterning, treestand safety, decoy tactics.</p>
-            <div class="card-specs-list">
-              <span class="spec-chip">VHF: 151.625</span>
-              <span class="spec-chip">Lead: Jesse Miller</span>
+            <span class="card-badge" style="font-size: 0.7rem; padding: 2px 6px;">SECTOR 03</span>
+            <h3 class="card-title" style="font-size: 1.2rem; margin: 4px 0 2px;">MIDWEST TIMBERS</h3>
+            <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 8px;">La Crosse, WI &bull; Whitetail patterning, treestands.</p>
+            <div class="card-specs-list" style="margin: 0 0 10px; gap: 4px;">
+              <span class="spec-chip" style="font-size: 0.7rem; padding: 2px 6px;">VHF: 151.625</span>
+              <span class="spec-chip" style="font-size: 0.7rem; padding: 2px 6px;">Jesse Miller</span>
             </div>
-            <div class="card-footer">
-              <a href="mailto:midwest@vanguardoutpost.com" class="btn btn-outline btn-block">EMAIL SECTOR</a>
+            <div class="card-footer" style="width: 100%; margin-top: auto; padding-top: 0; border-top: none;">
+              <a href="mailto:midwest@vanguardoutpost.com" class="btn btn-outline btn-block" style="padding: 6px 10px; font-size: 0.8rem;">EMAIL SECTOR</a>
             </div>
           </article>
 
           <!-- Hub 4 -->
-          <article class="tilt-card" data-max-tilt="16">
-            <div class="card-icon-wrap" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          <article class="tilt-card" data-max-tilt="12" style="padding: 16px 14px; height: auto !important;">
+            <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 6px;">
+              <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
             </div>
-            <span class="card-badge">SECTOR 04</span>
-            <h3 class="card-title">PACIFIC NORTHWEST</h3>
-            <p class="card-desc">Bend, OR &bull; High Desert archery pronghorn, Cascade Roosevelt elk stalks.</p>
-            <div class="card-specs-list">
-              <span class="spec-chip">VHF: 154.570</span>
-              <span class="spec-chip">Lead: Sarah Lindquist</span>
+            <span class="card-badge" style="font-size: 0.7rem; padding: 2px 6px;">SECTOR 04</span>
+            <h3 class="card-title" style="font-size: 1.2rem; margin: 4px 0 2px;">PACIFIC NORTHWEST</h3>
+            <p class="card-desc" style="font-size: 0.8rem; margin-bottom: 8px;">Bend, OR &bull; Pronghorn archery, Cascade elk stalks.</p>
+            <div class="card-specs-list" style="margin: 0 0 10px; gap: 4px;">
+              <span class="spec-chip" style="font-size: 0.7rem; padding: 2px 6px;">VHF: 154.570</span>
+              <span class="spec-chip" style="font-size: 0.7rem; padding: 2px 6px;">Sarah Lindquist</span>
             </div>
-            <div class="card-footer">
-              <a href="mailto:pnw@vanguardoutpost.com" class="btn btn-outline btn-block">EMAIL SECTOR</a>
+            <div class="card-footer" style="width: 100%; margin-top: auto; padding-top: 0; border-top: none;">
+              <a href="mailto:pnw@vanguardoutpost.com" class="btn btn-outline btn-block" style="padding: 6px 10px; font-size: 0.8rem;">EMAIL SECTOR</a>
             </div>
           </article>
         </div>

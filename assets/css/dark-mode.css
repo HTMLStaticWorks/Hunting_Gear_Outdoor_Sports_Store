@@ -373,24 +373,24 @@
   border-color: rgba(216, 82, 26, 0.3) !important;
 }
 
-/* Navbar Action Buttons: Equal 40px Height & High-Contrast Visibility in Light Theme */
+/* Navbar Action Buttons: Clean & High-Contrast Visibility in Light Theme */
 [data-theme="light"] .theme-toggle-btn,
 [data-theme="light"] .rtl-toggle-btn {
-  height: 40px !important;
-  min-width: 40px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 8px !important;
   background: #ffffff !important;
   color: #142219 !important;
-  border: 1.5px solid rgba(20, 34, 25, 0.35) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  border: 1.5px solid rgba(20, 34, 25, 0.22) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   box-sizing: border-box !important;
 }
 
-[data-theme="light"] .theme-toggle-btn svg,
-[data-theme="light"] .theme-toggle-btn path {
-  fill: #142219 !important;
+[data-theme="light"] .theme-toggle-btn svg {
+  stroke: #142219 !important;
   color: #142219 !important;
 }
 
@@ -399,11 +399,11 @@
   background: var(--color-blaze) !important;
   color: #ffffff !important;
   border-color: var(--color-blaze) !important;
+  box-shadow: 0 4px 12px rgba(224, 93, 38, 0.3) !important;
 }
 
-[data-theme="light"] .theme-toggle-btn:hover svg,
-[data-theme="light"] .theme-toggle-btn:hover path {
-  fill: #ffffff !important;
+[data-theme="light"] .theme-toggle-btn:hover svg {
+  stroke: #ffffff !important;
   color: #ffffff !important;
 }
 
@@ -489,5 +489,21 @@
     --border-accent: rgba(216, 82, 26, 0.45);
     --border-glow: 0 0 16px rgba(216, 82, 26, 0.2);
   }
+}
+
+[data-theme="light"] .social-icon-btn,
+[data-theme="light"] .contact-social-icons .social-icon-btn {
+  background: #ffffff !important;
+  color: #142219 !important;
+  border: 1.5px solid rgba(20, 34, 25, 0.22) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .social-icon-btn:hover,
+[data-theme="light"] .contact-social-icons .social-icon-btn:hover {
+  background: var(--color-blaze) !important;
+  color: #ffffff !important;
+  border-color: var(--color-blaze) !important;
+  box-shadow: 0 4px 12px rgba(224, 93, 38, 0.3) !important;
 }
 
