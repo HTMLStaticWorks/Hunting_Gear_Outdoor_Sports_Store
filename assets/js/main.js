@@ -407,6 +407,140 @@
   }
 
   /* ==========================================================================
+     5B. COMMERCE CTAS & INSTANT DISPATCH ORDERING (Point 2)
+     ========================================================================== */
+  function initCommerceCTAs() {
+    let cartCount = parseInt(localStorage.getItem('vanguard_cart_count') || '0', 10);
+    const updateNavCartBadge = () => {
+      const badges = document.querySelectorAll('.cart-count-badge');
+      badges.forEach(b => {
+        b.textContent = cartCount;
+        b.style.display = cartCount > 0 ? 'inline-flex' : 'none';
+      });
+    };
+    updateNavCartBadge();
+
+    // Show Cart Toast Notification
+    const showCartToast = (productName, price) => {
+      let toast = document.querySelector('.cart-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'cart-toast';
+        toast.innerHTML = `
+          <div class="toast-icon">✓</div>
+          <div class="toast-content">
+            <div class="toast-title">ADDED TO EXPEDITION MANIFEST</div>
+            <div class="toast-sub"><span id="toast-item-name"></span> &bull; <strong id="toast-item-price"></strong></div>
+          </div>
+        `;
+        document.body.appendChild(toast);
+      }
+
+      const nameEl = toast.querySelector('#toast-item-name');
+      const priceEl = toast.querySelector('#toast-item-price');
+      if (nameEl) nameEl.textContent = productName;
+      if (priceEl) priceEl.textContent = typeof price === 'number' ? `$${price.toLocaleString()}` : price;
+
+      toast.classList.add('is-active');
+      clearTimeout(window.__toastTimeout);
+      window.__toastTimeout = setTimeout(() => {
+        toast.classList.remove('is-active');
+      }, 3500);
+    };
+
+    // Add To Cart Event Handlers
+    document.addEventListener('click', (e) => {
+      const addBtn = e.target.closest('.btn-add-cart');
+      if (addBtn) {
+        e.preventDefault();
+        const card = addBtn.closest('.tilt-card') || addBtn.closest('.featured-spotlight-box') || addBtn.closest('.product-modal');
+        const title = addBtn.getAttribute('data-product') || card?.querySelector('.card-title')?.textContent || 'Field Equipment';
+        const price = addBtn.getAttribute('data-price') || card?.querySelector('.card-price')?.textContent || '$0';
+
+        cartCount += 1;
+        localStorage.setItem('vanguard_cart_count', cartCount);
+        updateNavCartBadge();
+        showCartToast(title, price);
+
+        // Visual button feedback
+        const originalText = addBtn.innerHTML;
+        addBtn.innerHTML = `<span>ADDED ✓</span>`;
+        setTimeout(() => {
+          addBtn.innerHTML = originalText;
+        }, 1500);
+      }
+    });
+
+    // Buy Now / Instant Checkout Handlers
+    const checkoutModal = document.getElementById('checkout-modal');
+    const openCheckout = (title, price) => {
+      if (!checkoutModal) return;
+      const titleEl = checkoutModal.querySelector('#checkout-product-title');
+      const priceEl = checkoutModal.querySelector('#checkout-product-price');
+      const totalEl = checkoutModal.querySelector('#checkout-total-price');
+
+      if (titleEl) titleEl.textContent = title;
+      const formattedPrice = typeof price === 'number' ? `$${price.toLocaleString()}` : price;
+      if (priceEl) priceEl.textContent = formattedPrice;
+      if (totalEl) totalEl.textContent = formattedPrice;
+
+      checkoutModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeCheckout = () => {
+      if (!checkoutModal) return;
+      checkoutModal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    };
+
+    document.addEventListener('click', (e) => {
+      const buyBtn = e.target.closest('.btn-buy-now');
+      if (buyBtn) {
+        e.preventDefault();
+        const card = buyBtn.closest('.tilt-card') || buyBtn.closest('.featured-spotlight-box') || buyBtn.closest('.product-modal');
+        const title = buyBtn.getAttribute('data-product') || card?.querySelector('.card-title')?.textContent || 'Field Gear Item';
+        const price = buyBtn.getAttribute('data-price') || card?.querySelector('.card-price')?.textContent || '$0';
+        openCheckout(title, price);
+      }
+
+      if (e.target.closest('.close-checkout-btn') || e.target === checkoutModal) {
+        closeCheckout();
+      }
+    });
+
+    // Checkout Form Submission
+    const checkoutForm = document.getElementById('fast-checkout-form');
+    if (checkoutForm) {
+      checkoutForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = checkoutForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span>VERIFYING DISPATCH...</span>`;
+        }
+
+        setTimeout(() => {
+          const successMsg = checkoutModal.querySelector('#checkout-success-view');
+          const formView = checkoutModal.querySelector('#checkout-form-view');
+          if (formView) formView.style.display = 'none';
+          if (successMsg) successMsg.style.display = 'block';
+
+          cartCount = 0;
+          localStorage.setItem('vanguard_cart_count', '0');
+          updateNavCartBadge();
+        }, 1200);
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && checkoutModal?.classList.contains('is-open')) {
+        closeCheckout();
+      }
+    });
+  }
+
+  /* ==========================================================================
      6. TRADE-IN VALUATION APPRAISAL CALCULATOR
      ========================================================================== */
   function initTradeInCalculator() {
@@ -664,6 +798,7 @@
     initBackToTop();
     initAccordion();
     initCatalog();
+    initCommerceCTAs();
     initTradeInCalculator();
     initPackWeightOptimizer();
     initFormValidation();

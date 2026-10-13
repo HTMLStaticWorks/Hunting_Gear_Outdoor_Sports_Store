@@ -63,8 +63,8 @@
           <div class="brand-emblem" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
           </div>
-          <div>
-            VANGUARD
+          <div class="brand-text">
+            <span class="brand-title">VANGUARD</span>
             <span class="brand-text-sub">EXPEDITION &bull; DIVISION</span>
           </div>
         </a>
@@ -74,6 +74,7 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="home-2.html" class="nav-link active">Home 2</a></li>
           <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="safety-regulations.html" class="nav-link">Safety &amp; Regulations</a></li>
           <li><a href="trade-in.html" class="nav-link">Trade-In</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -106,8 +107,8 @@
           <div class="brand-emblem" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
           </div>
-          <div>
-            VANGUARD
+          <div class="brand-text">
+            <span class="brand-title">VANGUARD</span>
             <span class="brand-text-sub">EXPEDITION &bull; DIVISION</span>
           </div>
         </a>
@@ -118,6 +119,7 @@
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
         <li><a href="home-2.html" class="mobile-nav-link active">Home 2</a></li>
         <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
         <li><a href="safety-regulations.html" class="mobile-nav-link">Safety &amp; Regulations</a></li>
         <li><a href="trade-in.html" class="mobile-nav-link">Trade-In</a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
@@ -394,16 +396,21 @@
             </div>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 20px;">
-            <div class="tilt-card" data-max-tilt="10" style="padding: 24px;">
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="position: relative; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle); height: 190px;">
+              <img src="../assets/images/hero-hunter-dawn.jpg" alt="Wilderness hunter observing fair chase ethics on public lands at sunrise" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <span class="card-badge" style="position: absolute; bottom: 12px; left: 12px; background: var(--color-olive); color: #fff;">100% PUBLIC LANDS FAIR CHASE</span>
+            </div>
+
+            <div class="tilt-card" data-max-tilt="10" style="padding: 20px;">
               <span class="card-badge" style="color: var(--color-blaze);">PUBLIC LANDS CHAMPION</span>
-              <h4 class="card-title" style="font-size: 1.3rem;">34,000+ ACRES RESTORED</h4>
+              <h4 class="card-title" style="font-size: 1.25rem;">34,000+ ACRES RESTORED</h4>
               <p class="card-desc">In partnership with Backcountry Hunters &amp; Anglers, our members actively fund public easement acquisitions ensuring permanent access for future generations.</p>
             </div>
 
-            <div class="tilt-card" data-max-tilt="10" style="padding: 24px;">
+            <div class="tilt-card" data-max-tilt="10" style="padding: 20px;">
               <span class="card-badge" style="color: var(--color-olive-light);">WILDLIFE CORRIDOR PRESERVATION</span>
-              <h4 class="card-title" style="font-size: 1.3rem;">GREATER YELLOWSTONE ECOSYSTEM</h4>
+              <h4 class="card-title" style="font-size: 1.25rem;">GREATER YELLOWSTONE ECOSYSTEM</h4>
               <p class="card-desc">Tracking and preserving ancestral migration corridors for elk, pronghorn, and mule deer across Montana and Wyoming passes.</p>
             </div>
           </div>
@@ -505,7 +512,8 @@
     </section>
 
     <!-- SECTION 6: CUSTOM OUTPOST CONSULTATION & PRO-STAFF EXPEDITION BOOKING (CTA) -->
-    <section class="section-pad" id="pro-staff-booking" style="position: relative;">
+    <section class="section-pad" id="pro-staff-booking" style="position: relative; overflow: hidden;">
+      <div class="hero-1-bg" style="background-image: url('../assets/images/hero-expedition-alpine.jpg'); opacity: 0.16; filter: saturate(0.8);"></div>
       <div class="container" style="position: relative; z-index: 2;">
         <div class="tilt-card" data-max-tilt="8" style="padding: var(--space-12) var(--space-8); max-width: 860px; margin: 0 auto; border: 1.5px solid var(--border-accent);">
           <div class="card-icon-wrap" aria-hidden="true" style="width: 72px; height: 72px;">
@@ -545,8 +553,8 @@
             <div class="brand-emblem" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
             </div>
-            <div>
-              VANGUARD
+            <div class="brand-text">
+              <span class="brand-title">VANGUARD</span>
               <span class="brand-text-sub">EXPEDITION &bull; DIVISION</span>
             </div>
           </a>
@@ -583,6 +591,7 @@
         <div>
           <h4 class="footer-heading">INTELLIGENCE</h4>
           <ul class="footer-nav">
+            <li><a href="about.html">About Us &bull; Heritage</a></li>
             <li><a href="safety-regulations.html">State Regulations Guide</a></li>
             <li><a href="safety-regulations.html">Blaze Orange Mandates</a></li>
             <li><a href="trade-in.html">Trade-In Appraisal</a></li>

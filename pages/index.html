@@ -71,8 +71,8 @@
           <div class="brand-emblem" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
           </div>
-          <div>
-            VANGUARD
+          <div class="brand-text">
+            <span class="brand-title">VANGUARD</span>
             <span class="brand-text-sub">OUTPOST &bull; MONTANA</span>
           </div>
         </a>
@@ -82,6 +82,7 @@
           <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="home-2.html" class="nav-link">Home 2</a></li>
           <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="safety-regulations.html" class="nav-link">Safety &amp; Regulations</a></li>
           <li><a href="trade-in.html" class="nav-link">Trade-In</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -114,8 +115,8 @@
           <div class="brand-emblem" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
           </div>
-          <div>
-            VANGUARD
+          <div class="brand-text">
+            <span class="brand-title">VANGUARD</span>
             <span class="brand-text-sub">OUTPOST &bull; MONTANA</span>
           </div>
         </a>
@@ -126,6 +127,7 @@
         <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
         <li><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
         <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
         <li><a href="safety-regulations.html" class="mobile-nav-link">Safety &amp; Regulations</a></li>
         <li><a href="trade-in.html" class="mobile-nav-link">Trade-In</a></li>
         <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
@@ -296,40 +298,76 @@
         </div>
 
         <div class="grid-3">
-          <div class="tilt-card" data-max-tilt="12">
-            <div class="card-img-wrap">
-              <img src="../assets/images/matrix-aircraft-alloy.jpg" alt="Aircraft 7075-T6 Alloy Scope Housing CNC Machining" loading="lazy">
+          <div class="material-matrix-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 22px;">
+            <div class="card-img-wrap" style="height: 180px; margin-bottom: 14px; border-radius: var(--radius-sm); overflow: hidden;">
+              <img src="../assets/images/matrix-aircraft-alloy.jpg" alt="Aircraft 7075-T6 Alloy Scope Housing CNC Machining" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <span class="card-badge">BALLISTIC GRADE</span>
-            <h3 class="card-title">AIRCRAFT 7075-T6 ALLOY</h3>
-            <p class="card-desc">Monolithic scope housings CNC-machined from billet aluminum, proof-tested to 1,200 Gs of repeated magnum recoil shock without point-of-impact shift.</p>
-            <div class="card-specs-list">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+              <span class="card-badge" style="margin: 0;">BALLISTIC GRADE</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-blaze); font-weight: 700;">1,200G PROOF</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.35rem; margin-bottom: 8px;">AIRCRAFT 7075-T6 ALLOY</h3>
+            <p class="card-desc" style="font-size: 0.9rem; margin-bottom: 14px;">Monolithic scope housings CNC-machined from billet aluminum, proof-tested to 1,200 Gs of repeated magnum recoil shock without point-of-impact shift.</p>
+            
+            <div style="margin-bottom: 8px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-family: var(--font-mono); color: var(--color-khaki);">
+                <span>RECOIL SHOCK HARDENING</span>
+                <span>99.2%</span>
+              </div>
+              <div class="spec-meter-bar"><div class="spec-meter-fill" style="width: 99.2%;"></div></div>
+            </div>
+
+            <div class="card-specs-list" style="margin-top: 10px;">
               <span class="spec-chip">Mil-Spec Hard Anodized</span>
               <span class="spec-chip">Nitrogen Shock Purged</span>
             </div>
           </div>
 
-          <div class="tilt-card" data-max-tilt="12">
-            <div class="card-img-wrap">
-              <img src="../assets/images/matrix-submersion-seal.jpg" alt="Submersion Hermetic Seal Glacial Water Testing" loading="lazy">
+          <div class="material-matrix-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 22px;">
+            <div class="card-img-wrap" style="height: 180px; margin-bottom: 14px; border-radius: var(--radius-sm); overflow: hidden;">
+              <img src="../assets/images/matrix-submersion-seal.jpg" alt="Submersion Hermetic Seal Glacial Water Testing" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <span class="card-badge">HYDRO-SHIELD PROOF</span>
-            <h3 class="card-title">SUBMERSION HERMETIC SEAL</h3>
-            <p class="card-desc">Dual O-ring mechanical seals and high-density fluoropolymer gaskets maintain zero internal fogging even after complete immersion in freezing glacial water.</p>
-            <div class="card-specs-list">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+              <span class="card-badge" style="margin: 0;">HYDRO-SHIELD PROOF</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-blaze); font-weight: 700;">IPX8 10M SUBMERGED</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.35rem; margin-bottom: 8px;">SUBMERSION HERMETIC SEAL</h3>
+            <p class="card-desc" style="font-size: 0.9rem; margin-bottom: 14px;">Dual O-ring mechanical seals and high-density fluoropolymer gaskets maintain zero internal fogging even after complete immersion in freezing glacial water.</p>
+            
+            <div style="margin-bottom: 8px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-family: var(--font-mono); color: var(--color-khaki);">
+                <span>GLACIAL WATER BARRIER</span>
+                <span>100% PROOF</span>
+              </div>
+              <div class="spec-meter-bar"><div class="spec-meter-fill" style="width: 100%;"></div></div>
+            </div>
+
+            <div class="card-specs-list" style="margin-top: 10px;">
               <span class="spec-chip">IPX8 Submersible</span>
               <span class="spec-chip">Anti-Hydrostatic Barrier</span>
             </div>
           </div>
 
-          <div class="tilt-card" data-max-tilt="12">
-            <div class="card-img-wrap">
-              <img src="../assets/images/matrix-stealth-fabric.jpg" alt="Micro-Suede Stealth Fabric Acoustic Friction Suppression" loading="lazy">
+          <div class="material-matrix-card" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 22px;">
+            <div class="card-img-wrap" style="height: 180px; margin-bottom: 14px; border-radius: var(--radius-sm); overflow: hidden;">
+              <img src="../assets/images/matrix-stealth-fabric.jpg" alt="Micro-Suede Stealth Fabric Acoustic Friction Suppression" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <span class="card-badge">SILENT MOVEMENT</span>
-            <h3 class="card-title">MICRO-SUEDE STEALTH FABRIC</h3>
-            <p class="card-desc">Engineered fiber weaves eliminate acoustic friction when brushing against timber, sagebrush, or ice-crusted oak brush during high-stakes stalks.</p>
-            <div class="card-specs-list">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+              <span class="card-badge" style="margin: 0;">SILENT MOVEMENT</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-blaze); font-weight: 700;">&lt;12 dB ACOUSTIC</span>
+            </div>
+            <h3 class="card-title" style="font-size: 1.35rem; margin-bottom: 8px;">MICRO-SUEDE STEALTH FABRIC</h3>
+            <p class="card-desc" style="font-size: 0.9rem; margin-bottom: 14px;">Engineered fiber weaves eliminate acoustic friction when brushing against timber, sagebrush, or ice-crusted oak brush during high-stakes stalks.</p>
+            
+            <div style="margin-bottom: 8px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-family: var(--font-mono); color: var(--color-khaki);">
+                <span>STALKING NOISE SUPPRESSION</span>
+                <span>95.4%</span>
+              </div>
+              <div class="spec-meter-bar"><div class="spec-meter-fill" style="width: 95.4%;"></div></div>
+            </div>
+
+            <div class="card-specs-list" style="margin-top: 10px;">
               <span class="spec-chip">Decibel Suppressed</span>
               <span class="spec-chip">Thermal Infrared Dampened</span>
             </div>
@@ -427,17 +465,25 @@
               </div>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-              <div style="background: var(--bg-surface-elevated); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-blaze); font-weight: 700;">COMMANDMENT 01</div>
-                <div style="font-family: var(--font-display); font-size: 1.2rem; text-transform: uppercase;">ALWAYS CONTROL THE MUZZLE DIRECTION</div>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Never let the muzzle cover anything you do not intend to destroy.</p>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="position: relative; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+                <img src="../assets/images/safety-blaze-orange.jpg" alt="Hunter wearing certified high-visibility blaze orange jacket and hat in autumn timber" loading="lazy" style="width: 100%; height: 210px; object-fit: cover; display: block;">
+                <span class="card-badge" style="position: absolute; bottom: 12px; left: 12px; background: var(--color-blaze); color: #fff;">360° VISIBILITY CERTIFIED</span>
+                <span style="position: absolute; bottom: 12px; right: 12px; font-family: var(--font-mono); font-size: 0.72rem; color: #fff; background: rgba(0,0,0,0.6); padding: 2px 8px; border-radius: 4px;">MONTANA FWP PROTOCOL</span>
               </div>
 
-              <div style="background: var(--bg-surface-elevated); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-blaze); font-weight: 700;">COMMANDMENT 02</div>
-                <div style="font-family: var(--font-display); font-size: 1.2rem; text-transform: uppercase;">POSITIVE TARGET &amp; BEYOND IDENTIFICATION</div>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Glass with binoculars, never your riflescope, to positively identify game.</p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                <div style="background: var(--bg-surface-elevated); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-blaze); font-weight: 700;">COMMANDMENT 01</div>
+                  <div style="font-family: var(--font-display); font-size: 1.05rem; text-transform: uppercase;">MUZZLE DIRECTION</div>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Never let the muzzle sweep any non-target.</p>
+                </div>
+
+                <div style="background: var(--bg-surface-elevated); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-blaze); font-weight: 700;">COMMANDMENT 02</div>
+                  <div style="font-family: var(--font-display); font-size: 1.05rem; text-transform: uppercase;">TARGET IDENTITY</div>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Glass with binoculars, never riflescopes.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -446,7 +492,8 @@
     </section>
 
     <!-- SECTION 6: OUTPOST FIELD DISPATCH & NEWSLETTER (Call to Action) -->
-    <section class="section-pad" id="section-6-dispatch" style="position: relative;">
+    <section class="section-pad" id="section-6-dispatch" style="position: relative; overflow: hidden;">
+      <div class="hero-1-bg" style="background-image: url('../assets/images/hero-expedition-alpine.jpg'); opacity: 0.16; filter: saturate(0.8);"></div>
       <div class="container" style="position: relative; z-index: 2;">
         <div class="tilt-card" data-max-tilt="8" style="padding: var(--space-12) var(--space-8); max-width: 860px; margin: 0 auto; border: 1.5px solid var(--border-accent);">
           <div class="card-icon-wrap" aria-hidden="true" style="width: 72px; height: 72px;">
@@ -483,8 +530,8 @@
             <div class="brand-emblem" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
             </div>
-            <div>
-              VANGUARD
+            <div class="brand-text">
+              <span class="brand-title">VANGUARD</span>
               <span class="brand-text-sub">OUTPOST &bull; MONTANA</span>
             </div>
           </a>
@@ -521,6 +568,7 @@
         <div>
           <h4 class="footer-heading">INTELLIGENCE</h4>
           <ul class="footer-nav">
+            <li><a href="about.html">About Us &bull; Heritage</a></li>
             <li><a href="safety-regulations.html">State Regulations Guide</a></li>
             <li><a href="safety-regulations.html">Blaze Orange Mandates</a></li>
             <li><a href="trade-in.html">Trade-In Appraisal</a></li>

@@ -12,6 +12,11 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+[dir="rtl"] .brand-text,
+[dir="rtl"] .brand-logo > div:not(.brand-emblem) {
+  text-align: right;
+}
+
 /* Nav & Mobile Drawer RTL */
 [dir="rtl"] .mobile-drawer {
   right: auto;
@@ -83,3 +88,17 @@
   left: auto;
   right: var(--space-4);
 }
+
+/* Waypoint Timeline RTL Flip */
+[dir="rtl"] .waypoint-timeline {
+  padding-left: 0;
+  padding-right: 28px;
+  border-left: none;
+  border-right: 2px dashed rgba(224, 93, 38, 0.45);
+}
+
+[dir="rtl"] .waypoint-item::before {
+  left: auto;
+  right: -35px;
+}
+

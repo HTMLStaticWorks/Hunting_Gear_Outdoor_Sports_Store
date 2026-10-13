@@ -70,8 +70,8 @@
           <div class="brand-emblem" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
           </div>
-          <div>
-            VANGUARD
+          <div class="brand-text">
+            <span class="brand-title">VANGUARD</span>
             <span class="brand-text-sub">OUTPOST &bull; DISPATCH</span>
           </div>
         </a>
@@ -81,6 +81,7 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="home-2.html" class="nav-link">Home 2</a></li>
           <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="safety-regulations.html" class="nav-link">Safety &amp; Regulations</a></li>
           <li><a href="trade-in.html" class="nav-link">Trade-In</a></li>
           <li><a href="contact.html" class="nav-link active">Contact</a></li>
@@ -113,8 +114,8 @@
         <div class="brand-emblem" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
         </div>
-        <div>
-          VANGUARD
+        <div class="brand-text">
+          <span class="brand-title">VANGUARD</span>
           <span class="brand-text-sub">OUTPOST &bull; DISPATCH</span>
         </div>
       </a>
@@ -125,6 +126,7 @@
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
         <li><a href="home-2.html" class="mobile-nav-link">Home 2</a></li>
         <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
         <li><a href="safety-regulations.html" class="mobile-nav-link">Safety &amp; Regulations</a></li>
         <li><a href="trade-in.html" class="mobile-nav-link">Trade-In</a></li>
         <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
@@ -149,7 +151,7 @@
   <main id="main-content">
 
     <!-- SECTION 1: OUTPOST HEADQUARTERS HERO -->
-    <section class="section-pad" id="contact-hero" style="position: relative; overflow: hidden; padding: 48px 0 32px;">
+    <section class="section-pad subpage-hero" id="contact-hero" style="position: relative; overflow: hidden;">
       <div class="hero-1-bg" style="background-image: url('../assets/images/contact-outpost-store.jpg');"></div>
       <div class="hero-1-overlay"></div>
       <div class="topography-canvas-container" aria-hidden="true">
@@ -262,9 +264,9 @@
           <!-- Outpost Facility & Direct Lines Side Column -->
           <div style="display: flex; flex-direction: column; gap: 16px;">
             <!-- Card 1: Flagship Showroom & Facility Info -->
-            <div class="tilt-card" data-max-tilt="8" style="padding: 18px 20px; height: auto !important;">
-              <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 8px;">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <div class="tilt-card" data-max-tilt="8" style="padding: 16px; height: auto !important;">
+              <div class="card-img-wrap" style="height: 150px; margin-bottom: 12px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+                <img src="../assets/images/contact-outpost-store.jpg" alt="Vanguard Bozeman flagship showroom and indoor ballistic range facility" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
               </div>
               <span class="card-badge" style="margin-bottom: 4px;">FLAGSHIP OUTPOST LODGE</span>
               <h3 class="card-title" style="font-size: 1.35rem; margin: 4px 0 4px;">BOZEMAN SHOWROOM &amp; RANGE</h3>
@@ -410,9 +412,9 @@
 
         <div class="grid-4" style="gap: 14px;">
           <!-- Hub 1 -->
-          <article class="tilt-card" data-max-tilt="12" style="padding: 16px 14px; height: auto !important;">
-            <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 6px;">
-              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3L2 21h20L12 3zm0 4.2l6.5 11.8h-13L12 7.2zM12 11l2.5 4.5h-5L12 11z"/></svg>
+          <article class="tilt-card" data-max-tilt="12" style="padding: 14px; height: auto !important;">
+            <div class="card-img-wrap" style="height: 120px; margin-bottom: 10px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="../assets/images/hero-hunter-dawn.jpg" alt="Northern Rockies sector field scouting" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
             <span class="card-badge" style="font-size: 0.7rem; padding: 2px 6px;">SECTOR 01</span>
             <h3 class="card-title" style="font-size: 1.2rem; margin: 4px 0 2px;">NORTHERN ROCKIES</h3>
@@ -427,9 +429,9 @@
           </article>
 
           <!-- Hub 2 -->
-          <article class="tilt-card" data-max-tilt="12" style="padding: 16px 14px; height: auto !important;">
-            <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 6px;">
-              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2L7 10l-6 8h22L14 6z"/></svg>
+          <article class="tilt-card" data-max-tilt="12" style="padding: 14px; height: auto !important;">
+            <div class="card-img-wrap" style="height: 120px; margin-bottom: 10px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="../assets/images/report-alaska-dall-sheep.jpg" alt="Alaska Range mountain sheep sector" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
             <span class="card-badge" style="font-size: 0.7rem; padding: 2px 6px;">SECTOR 02</span>
             <h3 class="card-title" style="font-size: 1.2rem; margin: 4px 0 2px;">ALASKA RANGE</h3>
@@ -444,9 +446,9 @@
           </article>
 
           <!-- Hub 3 -->
-          <article class="tilt-card" data-max-tilt="12" style="padding: 16px 14px; height: auto !important;">
-            <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 6px;">
-              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          <article class="tilt-card" data-max-tilt="12" style="padding: 14px; height: auto !important;">
+            <div class="card-img-wrap" style="height: 120px; margin-bottom: 10px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="../assets/images/safety-blaze-orange.jpg" alt="Midwest timber autumn treestand sector" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
             <span class="card-badge" style="font-size: 0.7rem; padding: 2px 6px;">SECTOR 03</span>
             <h3 class="card-title" style="font-size: 1.2rem; margin: 4px 0 2px;">MIDWEST TIMBERS</h3>
@@ -461,9 +463,9 @@
           </article>
 
           <!-- Hub 4 -->
-          <article class="tilt-card" data-max-tilt="12" style="padding: 16px 14px; height: auto !important;">
-            <div class="card-icon-wrap" aria-hidden="true" style="width: 44px; height: 44px; margin-bottom: 6px;">
-              <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          <article class="tilt-card" data-max-tilt="12" style="padding: 14px; height: auto !important;">
+            <div class="card-img-wrap" style="height: 120px; margin-bottom: 10px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="../assets/images/discipline-archery.jpg" alt="Pacific Northwest archery and elk stalk sector" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
             <span class="card-badge" style="font-size: 0.7rem; padding: 2px 6px;">SECTOR 04</span>
             <h3 class="card-title" style="font-size: 1.2rem; margin: 4px 0 2px;">PACIFIC NORTHWEST</h3>
@@ -491,8 +493,8 @@
             <div class="brand-emblem" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2L3 6v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6L12 2zm0 2.2l7 3.1v4.7c0 4.4-3.04 8.5-7 9.5-3.96-1-7-5.1-7-9.5V7.3l7-3.1zm-1 3.8l-4 7h2.5l2.5-4.3 2.5 4.3H17l-4-7h-2zm-3.5 6L5.5 17h3.5l-1.5-3zm7 0l-1.5 3H18.5l-2-3z"/></svg>
             </div>
-            <div>
-              VANGUARD
+            <div class="brand-text">
+              <span class="brand-title">VANGUARD</span>
               <span class="brand-text-sub">OUTPOST &bull; DISPATCH</span>
             </div>
           </a>
@@ -529,6 +531,7 @@
         <div>
           <h4 class="footer-heading">INTELLIGENCE</h4>
           <ul class="footer-nav">
+            <li><a href="about.html">About Us &bull; Heritage</a></li>
             <li><a href="safety-regulations.html">State Regulations Guide</a></li>
             <li><a href="safety-regulations.html">Blaze Orange Mandates</a></li>
             <li><a href="trade-in.html">Trade-In Appraisal</a></li>
