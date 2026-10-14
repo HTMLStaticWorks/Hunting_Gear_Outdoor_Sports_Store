@@ -2045,6 +2045,15 @@ select.form-control {
     text-align: center;
   }
 
+  .footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-social-links {
+    justify-content: center;
+  }
+
   .footer-heading::after {
     left: 50%;
     transform: translateX(-50%);
@@ -2843,6 +2852,18 @@ select.form-control {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+/* Header row: category tag + rating — wrap instead of overlapping on narrow screens */
+.material-matrix-card > div[style*="space-between"]:first-child {
+  flex-wrap: wrap;
+  align-items: center !important;
+  gap: 8px 12px;
+}
+
+.material-matrix-card > div[style*="space-between"]:first-child > span {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .spec-meter-bar {
